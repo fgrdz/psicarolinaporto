@@ -22,6 +22,23 @@ const theme = createTheme({
       fontSize: '24px',
       fontWeight: 300,
     },
+    h4: {
+      fontWeight: 500,
+      fontSize: '32px',
+      fontFamily: 'Clemente, sans-serif',
+      color: '#2C4A63',
+    },
+    h5: {
+      color: '#828282',
+      fontSize: '20px',
+      fontWeight: 300,
+      fontStyle: 'italic',
+    },
+    body1: {
+      fontSize: '16px',
+      textAlign: 'justify',
+      fontWeight: '600',
+    },
   },
 });
 
