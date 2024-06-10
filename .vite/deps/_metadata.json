@@ -1,0 +1,58 @@
+{
+  "hash": "cb1cdbc9",
+  "configHash": "546ccf54",
+  "lockfileHash": "d639d0a0",
+  "browserHash": "f26d2dfa",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "0b53d933",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4f092d04",
+      "needsInterop": true
+    },
+    "@mui/material": {
+      "src": "../../node_modules/@mui/material/index.js",
+      "file": "@mui_material.js",
+      "fileHash": "25b1ee06",
+      "needsInterop": false
+    },
+    "styled-components": {
+      "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
+      "file": "styled-components.js",
+      "fileHash": "55f17beb",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Facebook": {
+      "src": "../../node_modules/@mui/icons-material/Facebook.js",
+      "file": "@mui_icons-material_Facebook.js",
+      "fileHash": "c5010f6c",
+      "needsInterop": true
+    },
+    "@mui/icons-material": {
+      "src": "../../node_modules/@mui/icons-material/esm/index.js",
+      "file": "@mui_icons-material.js",
+      "fileHash": "f2b3b2f1",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-YIEACHPR": {
+      "file": "chunk-YIEACHPR.js"
+    },
+    "chunk-UH5CYJZR": {
+      "file": "chunk-UH5CYJZR.js"
+    },
+    "chunk-6KA4I5AX": {
+      "file": "chunk-6KA4I5AX.js"
+    },
+    "chunk-6EPYQA3G": {
+      "file": "chunk-6EPYQA3G.js"
+    }
+  }
+}
