@@ -1,8 +1,8 @@
 import profile from '../../assets/profile-1.jpg';
+
 import { styled } from 'styled-components';
-import { Box, Button, IconButton, Stack, Typography } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import { Instagram, LinkedIn } from '@mui/icons-material';
+import { Box, Stack, Typography } from '@mui/material';
+import SocialButtons from '../SocialButtons';
 
 export default function Info() {
   return (
@@ -19,18 +19,7 @@ export default function Info() {
           Ofereço a você um espaço de acolhimento pela via da palavra. Em um espaço livre de julgamentos é possível
           construir novas elaborações e novas possibilidades de ser para além do sofrimento.
         </Typography>
-        <Box>
-          <Button variant="contained">Agendar Sessão</Button>
-          <IconButton>
-            <FacebookIcon />
-          </IconButton>
-          <IconButton>
-            <LinkedIn />
-          </IconButton>
-          <IconButton>
-            <Instagram />
-          </IconButton>
-        </Box>
+        <SocialButtons />
       </Box>
       <Profile>
         <Avatar src={profile} alt="Profile picture" />

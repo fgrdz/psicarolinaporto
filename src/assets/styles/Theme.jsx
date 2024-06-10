@@ -34,10 +34,22 @@ const theme = createTheme({
       fontWeight: 300,
       fontStyle: 'italic',
     },
+    h6: {
+      color: '#2C4A63',
+      fontSize: '32px',
+      fontWeight: 400,
+      fontStyle: 'italic',
+    },
     body1: {
       fontSize: '16px',
       textAlign: 'justify',
       fontWeight: '500',
+    },
+    body2: {
+      fontSize: '16px',
+      textAlign: 'justify',
+      fontWeight: '600',
+      color: '#828282',
     },
   },
 });
