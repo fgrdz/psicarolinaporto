@@ -37,7 +37,7 @@ const theme = createTheme({
     body1: {
       fontSize: '16px',
       textAlign: 'justify',
-      fontWeight: '600',
+      fontWeight: '500',
     },
   },
 });

@@ -19,6 +19,7 @@ export default function AboutMe() {
             <Typography variant="h5" sx={{ paddingBottom: '10px' }}>
               Como a Psicanálise pode te ajudar?
             </Typography>
+
             <Typography variant="body1" sx={{ paddingBottom: '10px' }}>
               A Psicanálise direciona o tratamento através da posição do sujeito em relação ao outro. Ao trabalhar com o
               inconsciente e seus efeitos no corpo, na linguagem e nas relações é possível entender o que desencadeia a
