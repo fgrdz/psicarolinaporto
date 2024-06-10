@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import Info from '../components/Home/Info';
 import AboutMe from '../components/Home/AboutMe';
-// import { Container } from '@mui/material';
+import { Container } from '@mui/material';
 import MainText from '../components/Home/MainText';
 import FAQ from '../components/Home/FAQ';
 import BlogScroll from '../components/Home/BlogScroll';
@@ -9,16 +9,15 @@ import BlogScroll from '../components/Home/BlogScroll';
 export default function Home() {
   return (
     <main>
-      {/* <Container maxWidth="lg" disableGutters> */}
-      <HomeSection id="#">
-        <Info />
-      </HomeSection>
-      <MainText />
-      <AboutMe />
-      <BlogScroll />
-      <FAQ />
-
-      {/* </Container> */}
+      <Container maxWidth="xl" disableGutters>
+        <HomeSection id="#">
+          <Info />
+        </HomeSection>
+        <MainText />
+        <AboutMe />
+        <BlogScroll />
+        <FAQ />
+      </Container>
     </main>
   );
 }
