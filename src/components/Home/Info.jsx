@@ -49,7 +49,7 @@ const Avatar = styled.img`
   margin-left: auto;
   margin-right: auto;
   object-position: top;
-  
+
   /* 
   -webkit-box-shadow: 45px -28px 0.6px 0px rgba(44, 74, 99, 1);
   -moz-box-shadow: 45px -28px 0.6px 0px rgba(44, 74, 99, 1);

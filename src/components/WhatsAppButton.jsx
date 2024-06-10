@@ -12,9 +12,9 @@ const StyledFab = styled(Fab)`
   }
 `;
 const StyledInstagram = styled(Fab)`
-  background-color: #c13584 !important; /* Cor do Instagram */
+  background-color: #c13584 !important; 
   &:hover {
-    background-color: #a9337d !important; /* Cor de hover */
+    background-color: #a9337d !important;
   }
 `;
 const StyledStack = styled(Stack)`
