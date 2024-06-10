@@ -24,7 +24,7 @@ export default function BlogCard({ item }) {
         <img src={imageUrl} alt="Placeholder Image" />
       </StyledCard>
       <StyledCardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" color="white" component="div">
           {item.title}
         </Typography>
         {/* {firstParagraph && (

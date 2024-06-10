@@ -1,27 +1,39 @@
-/* eslint-disable no-irregular-whitespace */
-/* eslint-disable react/jsx-key */
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
-// import lines from '../../assets/lines.png';
 import maintext from '../../assets/main-text.jpg';
 import { Box, Stack, Typography } from '@mui/material';
 
 export default function AboutMe() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const imgElement = document.querySelector('#profile-img');
+      if (window.scrollY > 500) {
+        imgElement.classList.add('box-shadow-active');
+      } else {
+        imgElement.classList.remove('box-shadow-active');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <AboutMeSection id="aboutme">
+    <AboutMeSection id="sobre-a-psicanalise">
       <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} sx={{ alignItems: 'center' }}>
         <Box my={4} maxWidth="880px" display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
           <Typography>
             <Profile>
-              <img src={maintext} alt="Main text" />
+              <img id="profile-img" src={maintext} alt="Main text" />
             </Profile>
-            {/* <Back src={lines} alt="Lines" /> */}
-            <Typography variant="h4" sx={{ paddingBottom: '10px' }}>
+            <Typography variant="h4" color="white" sx={{ paddingBottom: '10px' }}>
               Sobre a Psicanálise
             </Typography>
             <Typography variant="h5" sx={{ paddingBottom: '10px' }}>
               Como a Psicanálise pode te ajudar?
             </Typography>
-
             <Typography variant="body1" sx={{ paddingBottom: '10px' }}>
               A Psicanálise direciona o tratamento através da posição do sujeito em relação ao outro. Ao trabalhar com o
               inconsciente e seus efeitos no corpo, na linguagem e nas relações é possível entender o que desencadeia a
@@ -52,18 +64,6 @@ export default function AboutMe() {
     </AboutMeSection>
   );
 }
-// const Back = styled.img`
-//   position: absolute; /* Defina a posição absoluta para o componente Back */
-//   top: 0;
-//   left: 150px;
-//   width: 300px;
-//   overflow: hidden;
-//   z-index: -1; /* Certifique-se de que o Back fique atrás da imagem */
-
-//   @media screen and (max-width: 768px) {
-//     display: none;
-//   }
-// `;
 
 const AboutMeSection = styled.section`
   position: relative;
@@ -71,6 +71,9 @@ const AboutMeSection = styled.section`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding-top: 2rem;
+  background-color: #2c4a63;
+  color: white !important;
 
   @media screen and (max-width: 1024px) {
     height: max-content;
@@ -87,6 +90,7 @@ const Profile = styled.div`
     height: 400px;
     object-fit: cover;
     border-radius: 4%;
+    transition: box-shadow 1000ms ease;
   }
 
   @media screen and (max-width: 768px) {
@@ -98,6 +102,7 @@ const Profile = styled.div`
     img {
       width: 100%;
       max-width: 300px;
+      box-shadow: none;
     }
   }
 `;

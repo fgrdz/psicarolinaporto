@@ -7,7 +7,7 @@ import SocialButtons from '../SocialButtons';
 
 export default function FAQ() {
   return (
-    <FAQSection id="faq">
+    <FAQSection id="perguntas-frequentes">
       <Stack
         direction={{ xs: 'column-reverse', sm: 'row' }}
         spacing={{ xs: 1, sm: 2, md: 4 }}
@@ -67,7 +67,7 @@ const FAQSection = styled.section`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 6rem;
+  margin-bottom: 8em;
 
   @media screen and (max-width: 1024px) {
     height: max-content;

@@ -10,10 +10,37 @@
   font-weight: 700;
   font-style: bold;
 }
+@font-face {
+  font-family: 'Clemente Hairline';
+  src: url('/fonts/Clemente-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: regular;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   background-color: #f7f8fa !important;
   overflow-x: hidden;
+}
+
+.box-shadow-active {
+  box-shadow: rgba(44, 74, 99, 0.4) -5px 5px, rgba(44, 74, 99, 0.3) -10px 10px, rgba(44, 74, 99, 0.2) -15px 15px,
+    rgba(44, 74, 99, 0.1) -20px 20px, rgba(44, 74, 99, 0.05) -25px 25px;
+}
+
+.box-shadow-active-home {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 /* Estilos da barra de rolagem para larguras maiores que 768px */
