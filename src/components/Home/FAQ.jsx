@@ -67,7 +67,8 @@ const FAQSection = styled.section`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 8em;
+  padding-top: 4rem;
+  padding-bottom: 12rem !important;
 
   @media screen and (max-width: 1024px) {
     height: max-content;

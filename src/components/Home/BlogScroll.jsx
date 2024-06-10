@@ -39,15 +39,7 @@ export default function AboutMe() {
     <BlogScrollSection id="blog-scroll">
       <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
         <Box maxWidth="880px" my={4} display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
-          <StyledTypography color="white" variant="h4">
-            Blog
-          </StyledTypography>
-          <StyledTypography variant="h5">
-            Acesse meus artigos mais recentes no{' '}
-            <a href="https://carolinagporto7.medium.com/" target="_blank">
-              Medium.
-            </a>
-          </StyledTypography>
+          <StyledTypography variant="h4">Blog</StyledTypography>
 
           <HorizontalScroll>{data && data.map((item) => <BlogCard key={item.id} item={item} />)}</HorizontalScroll>
           <Grid>{data && data.map((item) => <BlogCard key={item.id} item={item} />)}</Grid>
@@ -80,15 +72,15 @@ const Grid = styled.div`
 const HorizontalScroll = styled(Box)`
   display: flex;
   overflow-x: auto;
-  width: 100vw;
-  > :last-child {
-    margin-right: 500px; /* Adicionando margem de 200px no último filho */
+  /* width: 100vw; */
+  /* > :last-child {
+    margin-right: 500px; 
   }
   @media screen and (max-width: 768px) {
     > :last-child {
-      margin-right: 20px; /* Adicionando margem de 200px no último filho */
-    }
-  }
+      margin-right: 20px; 
+    } 
+   }*/
 
   @media screen and (min-width: 2000px) {
     display: none;
@@ -101,11 +93,10 @@ const BlogScrollSection = styled.section`
   flex-direction: column;
   justify-content: center;
   overflow-x: hidden;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
 
-  background-color: #2c4a63;
-  color: white !important;
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  background-color: #ced9df;
 
   @media screen and (max-width: 768px) {
     padding-bottom: 2rem;
