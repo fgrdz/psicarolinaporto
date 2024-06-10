@@ -1,6 +1,7 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/jsx-key */
 import styled from 'styled-components';
+import lines from '../../assets/lines.png';
 import maintext from '../../assets/main-text.jpg';
 import { Box, Stack, Typography } from '@mui/material';
 
@@ -13,6 +14,7 @@ export default function AboutMe() {
             <Profile>
               <img src={maintext} alt="Main text" />
             </Profile>
+            <Back src={lines} alt="Lines" />
             <Typography variant="h4" sx={{ paddingBottom: '10px' }}>
               Sobre a Psicanálise
             </Typography>
@@ -50,8 +52,21 @@ export default function AboutMe() {
     </AboutMeSection>
   );
 }
+const Back = styled.img`
+  position: absolute; /* Defina a posição absoluta para o componente Back */
+  top: 0;
+  left: 150px;
+  width: 300px;
+  overflow: hidden;
+  z-index: -1; /* Certifique-se de que o Back fique atrás da imagem */
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
 const AboutMeSection = styled.section`
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -65,6 +80,7 @@ const AboutMeSection = styled.section`
 const Profile = styled.div`
   float: left;
   margin: 0 2em 0 0;
+  position: relative; /* Defina a posição relativa para o container Profile */
 
   img {
     width: 300px;

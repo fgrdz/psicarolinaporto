@@ -1,10 +1,10 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/jsx-key */
 import { styled } from 'styled-components';
-
 import profile from '../../assets/Ellipse 1.png';
 import { Box, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
+import lines from '../../assets/lines-2.png';
 
 export default function AboutMe() {
   const [transform, setTransform] = useState(false);
@@ -16,10 +16,10 @@ export default function AboutMe() {
         spacing={{ xs: 1, sm: 2, md: 4 }}
         sx={{ alignItems: 'center' }}
       >
-        <Box my={4} maxWidth="550px" display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
+        <StyledBox my={4} maxWidth="550px" display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
+          <Back src={lines} alt="Lines" />
           <Typography variant="h4">Quem sou eu?</Typography>
           <Typography variant="h5">CRP 13/10290</Typography>
-
           <Typography variant="body1">
             Trabalhar com pessoas sempre foi minha paixão e vocação de vida. A psicologia foi o caminho que encontrei
             para chegar até elas e servir de porta-voz para elas encontrarem a sua própria voz.
@@ -35,10 +35,14 @@ export default function AboutMe() {
           <Typography variant="body1">
             Caso se interesse, te recebo em um espaço que criei na minha clínica de acolhimento da angústia e do
             sofrimento. Também tenho um perfil profissional onde discuto questões acerca da psicanálise, psicologia e
-            arte (@psicarolinagporto). Se sinta à vontade para conferir meu trabalho por lá também. Seja bem vinda(o) e
-            qualquer coisa é só entrar em contato. Até!{' '}
+            arte{' '}
+            <a href="https://www.instagram.com/psicarolinagporto" target="_blank">
+              (@psicarolinagporto)
+            </a>
+            . Se sinta à vontade para conferir meu trabalho por lá também. Seja bem vinda(o) e qualquer coisa é só
+            entrar em contato. Até!{' '}
           </Typography>
-        </Box>
+        </StyledBox>
 
         <Profile onMouseEnter={() => setTransform(true)} onMouseLeave={() => setTransform(false)} transform={transform}>
           <img src={transform ? profile : profile} alt="Profile picture" />
@@ -47,12 +51,30 @@ export default function AboutMe() {
     </AboutMeSection>
   );
 }
+const StyledBox = styled(Box)`
+  position: relative;
+`;
+
+const Back = styled.img`
+  position: absolute;
+  top: -30px;
+  right: -550px;
+  width: 500px;
+  z-index: -1;
+  pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
 const AboutMeSection = styled.section`
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  overflow: visible;
 
   @media screen and (max-width: 1024px) {
     height: max-content;
@@ -66,7 +88,7 @@ const Profile = styled.div`
 
   img {
     width: 300px;
-    transition: transform 0.3s ease; /* Adiciona a transição */
+    transition: transform 0.3s ease;
     transform: ${({ transform }) => (transform ? 'scale(1.1)' : 'scale(1)')};
   }
 `;
