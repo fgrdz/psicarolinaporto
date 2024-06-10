@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 import profile from '../../assets/Ellipse 1.png';
 import { Box, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
-import lines from '../../assets/lines-2.png';
+// import lines from '../../assets/lines-2.png';
 
 export default function AboutMe() {
   const [transform, setTransform] = useState(false);
@@ -17,7 +17,7 @@ export default function AboutMe() {
         sx={{ alignItems: 'center' }}
       >
         <StyledBox my={4} maxWidth="550px" display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
-          <Back src={lines} alt="Lines" />
+          {/* <Back src={lines} alt="Lines" /> */}
           <Typography variant="h4">Quem sou eu?</Typography>
           <Typography variant="h5">CRP 13/10290</Typography>
           <Typography variant="body1">
@@ -55,18 +55,18 @@ const StyledBox = styled(Box)`
   position: relative;
 `;
 
-const Back = styled.img`
-  position: absolute;
-  top: -30px;
-  right: -550px;
-  width: 500px;
-  z-index: -1;
-  pointer-events: none;
+// const Back = styled.img`
+//   position: absolute;
+//   top: -30px;
+//   right: -550px;
+//   width: 500px;
+//   z-index: -1;
+//   pointer-events: none;
 
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
+//   @media screen and (max-width: 768px) {
+//     display: none;
+//   }
+// `;
 
 const AboutMeSection = styled.section`
   position: relative;
