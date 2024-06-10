@@ -7,7 +7,7 @@ export default function FloatingNavbar() {
   const [activeNav, setActiveNav] = useState('#');
 
   return (
-    <Navbar>
+    <Navbar activeNav={activeNav}>
       <Link to="#" spy={true} smooth={true} offset={-140} duration={500} onClick={() => setActiveNav('#')}>
         <Logo src={logo} />
         <span>Carolina Guimarães Porto</span>
@@ -17,18 +17,6 @@ export default function FloatingNavbar() {
         <li className={activeNav === '#' ? 'active' : ''}>
           <Link to="#" spy={true} smooth={true} offset={-140} duration={500} onClick={() => setActiveNav('#')}>
             Home
-          </Link>
-        </li>
-        <li className={activeNav === 'sobre-a-psicanalise' ? 'active' : ''}>
-          <Link
-            to="sobre-a-psicanalise"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            onClick={() => setActiveNav('sobre-a-psicanalise')}
-          >
-            Sobre a psicanálise
           </Link>
         </li>
         <li className={activeNav === 'sobre-mim' ? 'active' : ''}>
@@ -79,7 +67,8 @@ const Logo = styled.img`
 `;
 
 const Navbar = styled.div`
-  background: rgba(247, 248, 250, 0.3);
+  background: rgba(247, 248, 250, 0.89);
+  /* background: #f7f8fa; */
   position: fixed;
   z-index: 2;
   display: flex;
@@ -91,7 +80,8 @@ const Navbar = styled.div`
   transform: translateX(-50%);
   height: 70px;
   width: 100vw;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
+
   @media screen and (max-width: 768px) {
     display: none;
     width: 0;
