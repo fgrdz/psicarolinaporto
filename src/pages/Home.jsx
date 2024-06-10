@@ -35,7 +35,6 @@ const HomeSection = styled.section`
     border-radius: 50%;
   }
 
-  /* MEDIA QUERIES: medium devices */
   @media screen and (max-width: 1024px) {
     flex-direction: column-reverse;
     justify-content: center;
