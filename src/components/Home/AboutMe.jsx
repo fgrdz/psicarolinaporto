@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-key */
 import { styled } from 'styled-components';
 import profile from '../../assets/Ellipse 1.png';
-import profile2 from '../../assets/Ellipse 2.png';
+// import profile2 from '../../assets/Ellipse 2.png';
 import { Box, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 // import lines from '../../assets/lines-2.png';

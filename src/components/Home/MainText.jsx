@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import maintext from '../../assets/main-text.jpg';
 import { Box, Stack, Typography } from '@mui/material';
@@ -83,7 +83,7 @@ const AboutMeSection = styled.section`
 const Profile = styled.div`
   float: left;
   margin: 0 2em 0 0;
-  position: relative; /* Defina a posição relativa para o container Profile */
+  position: relative;
 
   img {
     width: 300px;
