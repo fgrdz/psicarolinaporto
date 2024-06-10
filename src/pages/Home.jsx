@@ -9,15 +9,15 @@ import BlogScroll from '../components/Home/BlogScroll';
 export default function Home() {
   return (
     <main>
-      <Container maxWidth="xl" disableGutters>
-        <HomeSection id="#">
-          <Info />
-        </HomeSection>
-        <MainText />
-        <AboutMe />
-        <BlogScroll />
-        <FAQ />
-      </Container>
+      {/* <Container maxWidth="xl" disableGutters> */}
+      <HomeSection id="#">
+        <Info />
+      </HomeSection>
+      <MainText />
+      <AboutMe />
+      <BlogScroll />
+      <FAQ />
+      {/* </Container> */}
     </main>
   );
 }

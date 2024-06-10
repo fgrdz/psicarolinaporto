@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-key */
 import { styled } from 'styled-components';
 import profile from '../../assets/Ellipse 1.png';
+import profile2 from '../../assets/Ellipse 2.png';
 import { Box, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 // import lines from '../../assets/lines-2.png';
@@ -11,11 +12,7 @@ export default function AboutMe() {
 
   return (
     <AboutMeSection id="sobre-mim">
-      <Stack
-        direction={{ xs: 'column-reverse', sm: 'row' }}
-        spacing={{ xs: 1, sm: 2, md: 4 }}
-        sx={{ alignItems: 'center' }}
-      >
+      <StyledStack direction={{ xs: 'column-reverse', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
         <StyledBox my={4} maxWidth="550px" display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
           {/* <Back src={lines} alt="Lines" /> */}
           <Typography variant="h4">Quem sou eu?</Typography>
@@ -43,30 +40,23 @@ export default function AboutMe() {
             entrar em contato. Até!{' '}
           </Typography>
         </StyledBox>
-
         <Profile onMouseEnter={() => setTransform(true)} onMouseLeave={() => setTransform(false)} transform={transform}>
           <img src={transform ? profile : profile} alt="Profile picture" />
         </Profile>
-      </Stack>
+      </StyledStack>
     </AboutMeSection>
   );
 }
+
+const StyledStack = styled(Stack)`
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    align-items: flex-start !important;
+  }
+`;
 const StyledBox = styled(Box)`
   position: relative;
 `;
-
-// const Back = styled.img`
-//   position: absolute;
-//   top: -30px;
-//   right: -550px;
-//   width: 500px;
-//   z-index: -1;
-//   pointer-events: none;
-
-//   @media screen and (max-width: 768px) {
-//     display: none;
-//   }
-// `;
 
 const AboutMeSection = styled.section`
   position: relative;
@@ -80,11 +70,17 @@ const AboutMeSection = styled.section`
     height: max-content;
   }
 `;
-
 const Profile = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 1000px) {
+    position: sticky;
+    top: 70px;
+    width: 300px;
+    margin-left: 20px;
+  }
 
   img {
     width: 300px;
