@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export default function AboutMe() {
   const [data, setData] = useState(null);
-  const API_URL = 'https://v1.nocodeapi.com/pixiepunkposse/medium/XwhVWYbpEJwtmsSg';
+  const API_URL = 'https://v1.nocodeapi.com/pixiepunkposse/medium/lkWTxdctuqVbLEqm';
   const scrollContainerRef = useRef(null);
 
   useEffect(() => {
