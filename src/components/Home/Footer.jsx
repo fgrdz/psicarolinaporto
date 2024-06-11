@@ -10,34 +10,48 @@ export default function Footer() {
       <ContainerFooter>
         <ContentFooter>
           <FooterSection1>
-            <Typography variant="h1" sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', marginBottom: '8px' }}>
+            <Typography
+              variant="h1"
+              sx={{ fontSize: '18px', fontWeight: 'bold', color: 'black', marginBottom: '8px', textAlign: 'start' }}
+            >
               Atendimento e Contato:
             </Typography>
             <Typography variant="body1" sx={{ fontSize: '14px' }}>
-              Campina Grande, Paraíba: carolinagporto7@gmail.com
+              Campina Grande, Paraíba
             </Typography>
-            <Typography variant="body1" sx={{ fontSize: '14px' }}></Typography>
+            <Typography variant="body1" sx={{ fontSize: '14px' }}>
+              E-mail: carolinagporto7@gmail.com
+            </Typography>
             <Typography variant="body1" sx={{ fontSize: '14px' }}>
               Contato: +55 83 9627-6657
             </Typography>
-          </FooterSection1>
-          <FooterSection1>
             <Typography variant="body1" sx={{ fontSize: '14px' }}>
-              Atendimento em horário comercial ou <br /> noturno via agendamento prévio.
-              <br />
+              Zenklub:{' '}
+              <ZenklubLink href="https://zenklub.com.br/psicologos/carolina-guimaraes-porto/" target="_blank">
+                /carolina-guimaraes-porto
+              </ZenklubLink>
+            </Typography>
+            <SocialMediaIcons>
+              <a href="https://www.instagram.com/psicarolinagporto" target="_blank">
+                <Instagram sx={{ fontSize: 24, marginRight: 1, cursor: 'pointer' }} />
+              </a>
+              <a href="https://www.linkedin.com/in/carolina-porto-60984b1a1/" target="_blank">
+                <LinkedIn sx={{ fontSize: 24, cursor: 'pointer' }} />
+              </a>
+            </SocialMediaIcons>
+          </FooterSection1>
+
+          <FooterSection2>
+            <Typography variant="body1" sx={{ fontSize: '14px' }}>
+              Atendimento em horário comercial ou <br />
+              noturno via agendamento prévio.
+            </Typography>
+            <Typography variant="body1" sx={{ fontSize: '14px' }}>
               Disponibilidade de horário sob consulta.
             </Typography>
-          </FooterSection1>
-          <SocialMediaIcons>
-            <a href="https://www.instagram.com/psicarolinagporto" target="_blank">
-              <Instagram sx={{ fontSize: 24, marginRight: 1, cursor: 'pointer' }} />
-            </a>
-            <a href="https://www.linkedin.com/in/carolina-porto-60984b1a1/" target="_blank">
-              <LinkedIn sx={{ fontSize: 24, cursor: 'pointer' }} />
-            </a>
-          </SocialMediaIcons>
+          </FooterSection2>
+          <Logo src={image} alt={'Logotipo Carolina Porto'} />
         </ContentFooter>
-        <Logo src={image} alt={'Logotipo Carolina Porto'} />
       </ContainerFooter>
       <Copyrigth>
         <Typography
@@ -53,10 +67,17 @@ export default function Footer() {
   );
 }
 
+const ZenklubLink = styled.a`
+  color: #7755e8;
+
+  text-decoration: none;
+  font-weight: 700;
+`;
+
 const Copyrigth = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -64,8 +85,20 @@ const Copyrigth = styled.div`
   }
 `;
 
+// const Text = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   padding-bottom: 3rem;
+//   text-align: center;
+
+//   @media (max-width: 768px) {
+//     padding-bottom: 6rem;
+//   }
+// `;
+
 const ContainerFooter = styled.div`
   display: flex;
+
   align-items: center;
   align-content: center;
   justify-content: space-between;
@@ -82,12 +115,17 @@ const ContainerFooter = styled.div`
 
 const ContentFooter = styled.div`
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  gap: 100px;
+
   justify-content: center;
   max-height: 500px;
+  align-items: center;
 
   @media (max-width: 768px) {
     margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
   }
 `;
 
@@ -95,8 +133,8 @@ const FooterSection1 = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 60px;
-  margin-bottom: 40px;
-  width: 100%;
+  margin-top: 2rem;
+
   p {
     text-align: start;
   }
@@ -114,10 +152,32 @@ const FooterSection1 = styled.div`
   }
 `;
 
+const FooterSection2 = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  p {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    padding: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center !important;
+    p {
+      text-align: center !important;
+      font-size: 12px !important;
+    }
+  }
+`;
+
 const SocialMediaIcons = styled.div`
   display: flex;
-  margin-left: 60px;
-  margin-bottom: 20px;
+  /* margin-left: 60px; */
+  margin-top: 10px;
+  /* margin-bottom: 20px; */
 
   @media (max-width: 768px) {
     display: none;
@@ -125,8 +185,6 @@ const SocialMediaIcons = styled.div`
 `;
 
 const Logo = styled.img`
-  justify-self: flex-end;
-  margin-left: 40%;
   width: 300px;
   height: 300px;
 
@@ -134,5 +192,6 @@ const Logo = styled.img`
     margin-left: 0;
     width: 200px;
     height: 200px;
+    margin-top: -40px;
   }
 `;

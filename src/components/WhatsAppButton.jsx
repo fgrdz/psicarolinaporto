@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Fab, Stack } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import zenklubIcon from '../assets/zenklub icon.png';
 // import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 // import { Link } from 'react-scroll';
 
@@ -19,6 +20,13 @@ const StyledInstagram = styled(Fab)`
     background-color: #a9337d !important;
   }
 `;
+const ZenklubFab = styled(Fab)`
+  background-color: #7755e8 !important;
+  &:hover {
+    background-color: #6b4fd1 !important;
+  }
+`;
+
 const StyledStack = styled(Stack)`
   position: fixed !important;
   bottom: 20px !important;
@@ -45,6 +53,14 @@ const WhatsAppButton = () => {
       >
         <InstagramIcon style={{ color: 'white' }} />
       </StyledInstagram>
+      <ZenklubFab
+        size="medium"
+        href="https://zenklub.com.br/psicologos/carolina-guimaraes-porto/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LogoImg src={zenklubIcon} />
+      </ZenklubFab>
       {/* <Link to="#" spy={true} smooth={true} offset={-140} duration={500}>
         <Tooltip title="Ir para o topo" placement="left">
           <Fab size="medium">
@@ -55,5 +71,11 @@ const WhatsAppButton = () => {
     </StyledStack>
   );
 };
+
+const LogoImg = styled.img`
+  width: 75%;
+  height: auto;
+  border-radius: 50%;
+`;
 
 export default WhatsAppButton;
