@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import { styled } from 'styled-components';
 import image from '../../assets/logotipo4.png';
-import { Instagram, LinkedIn, WhatsApp } from '@mui/icons-material';
+import { Instagram, LinkedIn } from '@mui/icons-material';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
