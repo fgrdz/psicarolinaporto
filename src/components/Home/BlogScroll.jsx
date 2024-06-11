@@ -1,7 +1,7 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/jsx-key */
 import { styled } from 'styled-components';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography, Button, IconButton } from '@mui/material';
 import BlogCard from './BlogCard';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
@@ -36,17 +36,17 @@ export default function AboutMe() {
     fetchData();
   }, []);
 
-  // const scrollLeft = () => {
-  //   if (scrollContainerRef.current) {
-  //     scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-  //   }
-  // };
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
 
-  // const scrollRight = () => {
-  //   if (scrollContainerRef.current) {
-  //     scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-  //   }
-  // };
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
 
   return (
     <BlogScrollSection id="blog-scroll">
@@ -55,15 +55,15 @@ export default function AboutMe() {
           <Typography variant="h4">Blog</Typography>
 
           <ButtonContainer>
-            {/* <Button size="small" onClick={scrollLeft}>
+            <ScrollButton size="small" onClick={scrollLeft}>
               ◀
-            </Button> */}
+            </ScrollButton>
             <HorizontalScroll ref={scrollContainerRef}>
               {data && data.map((item) => <BlogCard key={item.id} item={item} />)}
             </HorizontalScroll>
-            {/* <Button size="small" onClick={scrollRight}>
+            <ScrollButton size="small" onClick={scrollRight}>
               ▶
-            </Button> */}
+            </ScrollButton>
           </ButtonContainer>
 
           <Grid>{data && data.map((item) => <BlogCard key={item.id} item={item} />)}</Grid>
@@ -72,6 +72,14 @@ export default function AboutMe() {
     </BlogScrollSection>
   );
 }
+
+const ScrollButton = styled(IconButton)`
+  margin-bottom: -11px !important;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
 const StyledBox = styled(Box)`
   max-width: 880px;
@@ -126,7 +134,8 @@ const BlogScrollSection = styled.section`
 
 const ButtonContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
+
   width: 100%;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
