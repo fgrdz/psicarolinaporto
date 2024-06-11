@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 import { Link } from 'react-scroll';
 import { useState } from 'react';
 import logo from '../../assets/logo-normal.png';
-import { FaBars, FaTimes } from 'react-icons/fa'; 
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function FloatingNavbar() {
   const [activeNav, setActiveNav] = useState('#');
@@ -21,47 +21,66 @@ export default function FloatingNavbar() {
         </Link>
 
         <ul>
-        <li className={activeNav === '#' ? 'active' : ''}>
-              <Link to="#" spy={true} smooth={true} offset={-140} duration={500} onClick={() => { setActiveNav('#'); toggleMenu(); }}>
-                Home
-              </Link>
-            </li>
-            <li className={activeNav === 'sobre-mim' ? 'active' : ''}>
-              <Link
-                to="sobre-mim"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={() => { setActiveNav('sobre-mim'); toggleMenu(); }}
-              >
-                Sobre mim
-              </Link>
-            </li>
-            <li className={activeNav === 'blog-scroll' ? 'active' : ''}>
-              <Link
-                to="blog-scroll"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={() => { setActiveNav('blog-scroll'); toggleMenu(); }}
-              >
-                Blog
-              </Link>
-            </li>
-            <li className={activeNav === 'perguntas-frequentes' ? 'active' : ''}>
-              <Link
-                to="perguntas-frequentes"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={() => { setActiveNav('perguntas-frequentes'); toggleMenu(); }}
-              >
-                Perguntas frequentes
-              </Link>
-            </li>
+          <li className={activeNav === '#' ? 'active' : ''}>
+            <Link
+              to="#"
+              spy={true}
+              smooth={true}
+              offset={-140}
+              duration={500}
+              onClick={() => {
+                setActiveNav('#');
+                toggleMenu();
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li className={activeNav === 'sobre-mim' ? 'active' : ''}>
+            <Link
+              to="sobre-mim"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={() => {
+                setActiveNav('sobre-mim');
+                toggleMenu();
+              }}
+            >
+              Sobre mim
+            </Link>
+          </li>
+          <li className={activeNav === 'blog-scroll' ? 'active' : ''}>
+            <Link
+              to="blog-scroll"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={() => {
+                setActiveNav('blog-scroll');
+                toggleMenu();
+              }}
+            >
+              Blog
+            </Link>
+          </li>
+          <li className={activeNav === 'perguntas-frequentes' ? 'active' : ''}>
+            <Link
+              to="perguntas-frequentes"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={() => {
+                setActiveNav('perguntas-frequentes');
+                toggleMenu();
+              }}
+            >
+              Perguntas frequentes
+            </Link>
+          </li>
         </ul>
       </Navbar>
 
@@ -71,54 +90,71 @@ export default function FloatingNavbar() {
             <Logo src={logo} />
             <span>Carolina Guimarães Porto</span>
           </Link>
-          <MenuIcon onClick={toggleMenu}>
-            {menuOpen ? <FaTimes /> : <FaBars />}
-          </MenuIcon>
+          <MenuIcon onClick={toggleMenu}>{menuOpen ? <FaTimes /> : <FaBars />}</MenuIcon>
         </MobileHeader>
         {menuOpen && (
           <DropdownMenuOverlay onClick={toggleMenu}>
             <DropdownMenu>
-            <li className={activeNav === '#' ? 'active' : ''}>
-              <Link to="#" spy={true} smooth={true} offset={-140} duration={500} onClick={() => { setActiveNav('#'); toggleMenu(); }}>
-                Home
-              </Link>
-            </li>
-            <li className={activeNav === 'sobre-mim' ? 'active' : ''}>
-              <Link
-                to="sobre-mim"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={() => { setActiveNav('sobre-mim'); toggleMenu(); }}
-              >
-                Sobre mim
-              </Link>
-            </li>
-            <li className={activeNav === 'blog-scroll' ? 'active' : ''}>
-              <Link
-                to="blog-scroll"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={() => { setActiveNav('blog-scroll'); toggleMenu(); }}
-              >
-                Blog
-              </Link>
-            </li>
-            <li className={activeNav === 'perguntas-frequentes' ? 'active' : ''}>
-              <Link
-                to="perguntas-frequentes"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onClick={() => { setActiveNav('perguntas-frequentes'); toggleMenu(); }}
-              >
-                Perguntas frequentes
-              </Link>
-            </li>
+              <li className={activeNav === '#' ? 'active' : ''}>
+                <Link
+                  to="#"
+                  spy={true}
+                  smooth={true}
+                  offset={-140}
+                  duration={500}
+                  onClick={() => {
+                    setActiveNav('#');
+                    toggleMenu();
+                  }}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className={activeNav === 'sobre-mim' ? 'active' : ''}>
+                <Link
+                  to="sobre-mim"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  onClick={() => {
+                    setActiveNav('sobre-mim');
+                    toggleMenu();
+                  }}
+                >
+                  Sobre mim
+                </Link>
+              </li>
+              <li className={activeNav === 'blog-scroll' ? 'active' : ''}>
+                <Link
+                  to="blog-scroll"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  onClick={() => {
+                    setActiveNav('blog-scroll');
+                    toggleMenu();
+                  }}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li className={activeNav === 'perguntas-frequentes' ? 'active' : ''}>
+                <Link
+                  to="perguntas-frequentes"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  onClick={() => {
+                    setActiveNav('perguntas-frequentes');
+                    toggleMenu();
+                  }}
+                >
+                  Perguntas frequentes
+                </Link>
+              </li>
             </DropdownMenu>
           </DropdownMenuOverlay>
         )}
@@ -131,6 +167,10 @@ const Logo = styled.img`
   width: 70px;
   margin-left: 1rem;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    width: 50px;
+    margin-left: 0;
+  }
 `;
 
 const Navbar = styled.div`
@@ -236,7 +276,7 @@ const MobileHeader = styled.div`
   span {
     font-family: 'Clemente Hairline', sans-serif;
     letter-spacing: 3px;
-    font-size: 1rem;
+    font-size: 0.8rem !important;
     color: #2c4a63;
     cursor: pointer;
   }
@@ -252,6 +292,7 @@ const MenuIcon = styled.div`
   font-size: 1.5rem;
   color: #2c4a63;
   cursor: pointer;
+  display: flex;
 `;
 
 const DropdownMenuOverlay = styled.div`
@@ -260,8 +301,8 @@ const DropdownMenuOverlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); 
-  z-index: 1; 
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 `;
 
 const DropdownMenu = styled.ul`

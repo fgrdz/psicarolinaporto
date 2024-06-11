@@ -1,7 +1,7 @@
 /* eslint-disable no-irregular-whitespace */
 /* eslint-disable react/jsx-key */
 import { styled } from 'styled-components';
-import { Box, Stack, Typography, Button } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import BlogCard from './BlogCard';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
@@ -36,17 +36,17 @@ export default function AboutMe() {
     fetchData();
   }, []);
 
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-    }
-  };
+  // const scrollLeft = () => {
+  //   if (scrollContainerRef.current) {
+  //     scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+  //   }
+  // };
 
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-    }
-  };
+  // const scrollRight = () => {
+  //   if (scrollContainerRef.current) {
+  //     scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+  //   }
+  // };
 
   return (
     <BlogScrollSection id="blog-scroll">

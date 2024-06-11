@@ -1,58 +1,97 @@
 {
-  "hash": "cb1cdbc9",
+  "hash": "033456a3",
   "configHash": "546ccf54",
-  "lockfileHash": "d639d0a0",
-  "browserHash": "f26d2dfa",
+  "lockfileHash": "ddbc223e",
+  "browserHash": "daba918d",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "0b53d933",
+      "fileHash": "18cda74d",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "4f092d04",
+      "fileHash": "59210694",
       "needsInterop": true
     },
     "@mui/material": {
       "src": "../../node_modules/@mui/material/index.js",
       "file": "@mui_material.js",
-      "fileHash": "25b1ee06",
+      "fileHash": "b626628d",
       "needsInterop": false
     },
     "styled-components": {
       "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
       "file": "styled-components.js",
-      "fileHash": "55f17beb",
+      "fileHash": "95424b4c",
       "needsInterop": false
     },
-    "@mui/icons-material/Facebook": {
-      "src": "../../node_modules/@mui/icons-material/Facebook.js",
-      "file": "@mui_icons-material_Facebook.js",
-      "fileHash": "c5010f6c",
+    "@mui/icons-material/WhatsApp": {
+      "src": "../../node_modules/@mui/icons-material/WhatsApp.js",
+      "file": "@mui_icons-material_WhatsApp.js",
+      "fileHash": "851db88a",
+      "needsInterop": true
+    },
+    "@mui/icons-material/Instagram": {
+      "src": "../../node_modules/@mui/icons-material/Instagram.js",
+      "file": "@mui_icons-material_Instagram.js",
+      "fileHash": "a1682c36",
+      "needsInterop": true
+    },
+    "react-scroll": {
+      "src": "../../node_modules/react-scroll/modules/index.js",
+      "file": "react-scroll.js",
+      "fileHash": "db7f3396",
+      "needsInterop": true
+    },
+    "@mui/icons-material/ExpandMore": {
+      "src": "../../node_modules/@mui/icons-material/ExpandMore.js",
+      "file": "@mui_icons-material_ExpandMore.js",
+      "fileHash": "09bc331e",
       "needsInterop": true
     },
     "@mui/icons-material": {
       "src": "../../node_modules/@mui/icons-material/esm/index.js",
       "file": "@mui_icons-material.js",
-      "fileHash": "f2b3b2f1",
+      "fileHash": "2e1da385",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "a0a1246a",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "9345c7dd",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-YIEACHPR": {
-      "file": "chunk-YIEACHPR.js"
+    "chunk-WXSKVWTA": {
+      "file": "chunk-WXSKVWTA.js"
     },
-    "chunk-UH5CYJZR": {
-      "file": "chunk-UH5CYJZR.js"
+    "chunk-UYYB756V": {
+      "file": "chunk-UYYB756V.js"
     },
-    "chunk-6KA4I5AX": {
-      "file": "chunk-6KA4I5AX.js"
+    "chunk-C3PEWKD6": {
+      "file": "chunk-C3PEWKD6.js"
     },
-    "chunk-6EPYQA3G": {
-      "file": "chunk-6EPYQA3G.js"
+    "chunk-F7VXNE7S": {
+      "file": "chunk-F7VXNE7S.js"
+    },
+    "chunk-NOHTQ6LC": {
+      "file": "chunk-NOHTQ6LC.js"
+    },
+    "chunk-4JI2AD7N": {
+      "file": "chunk-4JI2AD7N.js"
+    },
+    "chunk-CEQRFMJQ": {
+      "file": "chunk-CEQRFMJQ.js"
     }
   }
 }
