@@ -65,7 +65,7 @@ const Avatar = styled.img`
   transition: box-shadow 0.3s ease; /* Adiciona a transição */
 
   @media (max-width: 768px) {
-    margin-top: 20px;
+    margin-top: 80px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -79,6 +79,7 @@ const Avatar = styled.img`
 `;
 
 const Profile = styled.div`
+
   display: flex;
   align-items: center;
   justify-content: center;
