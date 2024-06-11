@@ -80,7 +80,6 @@ const Profile = styled.div`
     margin-left: auto;
     margin-right: auto;
     object-position: 80% 100%;
-
     border-radius: 4%;
   }
 
@@ -89,7 +88,6 @@ const Profile = styled.div`
     margin: 0 auto 1em auto;
     display: flex;
     justify-content: center;
-
     img {
       width: 100%;
       max-width: 300px;
