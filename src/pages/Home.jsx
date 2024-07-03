@@ -5,6 +5,7 @@ import AboutMe from '../components/Home/AboutMe';
 import FAQ from '../components/Home/FAQ';
 import BlogScroll from '../components/Home/BlogScroll';
 import Footer from '../components/Home/Footer';
+import Reviews from '../components/Home/Reviews';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </HomeSection>
       <AboutMe />
       <BlogScroll />
+      <Reviews/>
       <FAQ />
       <Footer/>
     </main>
