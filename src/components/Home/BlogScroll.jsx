@@ -1,12 +1,12 @@
-/* eslint-disable no-irregular-whitespace */
-/* eslint-disable react/jsx-key */
-import { styled } from 'styled-components';
-import { Box, Stack, Typography, Button, IconButton } from '@mui/material';
-import BlogCard from './BlogCard';
 import { useEffect, useState, useRef } from 'react';
+import styled from 'styled-components';
 import axios from 'axios';
+import { Typography, IconButton } from '@mui/material';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import BlogCard from './BlogCard';
 
-export default function AboutMe() {
+export default function BlogScroll() {
   const [data, setData] = useState(null);
   const API_URL = 'https://v1.nocodeapi.com/pixiepunkposse/medium/lkWTxdctuqVbLEqm';
   const scrollContainerRef = useRef(null);
@@ -19,12 +19,10 @@ export default function AboutMe() {
 
       if (cachedData && cachedTime && Date.now() - cachedTime < cacheDuration) {
         setData(JSON.parse(cachedData));
-        console.log('Using cached data');
       } else {
         try {
           const response = await axios.get(API_URL);
           setData(response.data);
-          console.log('Using fetched data');
           localStorage.setItem('blogData', JSON.stringify(response.data));
           localStorage.setItem('blogDataTime', Date.now().toString());
         } catch (error) {
@@ -49,93 +47,53 @@ export default function AboutMe() {
   };
 
   return (
-    <BlogScrollSection id="blog-scroll">
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
-        <StyledBox my={4} display="flex" flexDirection="column" gap={2} p={2}>
-          <Typography variant="h4">Blog</Typography>
-
-          <ButtonContainer>
-            <ScrollButton size="small" onClick={scrollLeft}>
-              ◀
-            </ScrollButton>
-            <HorizontalScroll ref={scrollContainerRef}>
-              {data && data.map((item) => <BlogCard key={item.id} item={item} />)}
-            </HorizontalScroll>
-            <ScrollButton size="small" onClick={scrollRight}>
-              ▶
-            </ScrollButton>
-          </ButtonContainer>
-
-          <Grid>{data && data.map((item) => <BlogCard key={item.id} item={item} />)}</Grid>
-        </StyledBox>
-      </Stack>
-    </BlogScrollSection>
+    <Container>
+      <Typography variant="h4" color="#2c4a63" textAlign="center" margin="30px">
+        Blog
+      </Typography>
+      <ArrowContainer>
+        <ArrowButton onClick={scrollLeft}>
+          <ArrowBackIosIcon />
+        </ArrowButton>
+        <ScrollContainer ref={scrollContainerRef}>
+          {data && data.map((item) => <BlogCard key={item.id} item={item} />)}
+        </ScrollContainer>
+        <ArrowButton onClick={scrollRight}>
+          <ArrowForwardIosIcon />
+        </ArrowButton>
+      </ArrowContainer>
+    </Container>
   );
 }
 
-const ScrollButton = styled(IconButton)`
-  margin-bottom: -11px !important;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+const Container = styled.div`
+  background-color: #ced9df;
+  padding: 20px;
+  text-align: center;
 `;
 
-const StyledBox = styled(Box)`
-  max-width: 880px;
-  align-items: flex-start;
-
-  @media screen and (max-width: 860px) {
-    max-width: 100vw;
-  }
-`;
-
-const Grid = styled.div`
-  display: none;
-
-  @media screen and (min-width: 2000px) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-  }
-`;
-
-const HorizontalScroll = styled(Box)`
+const ScrollContainer = styled.div`
   display: flex;
   overflow-x: auto;
-  width: 100%;
+  gap: 20px;
   scroll-behavior: smooth;
-
-  @media screen and (min-width: 2000px) {
+  padding: 20px;
+  &::-webkit-scrollbar {
     display: none;
   }
 `;
 
-const BlogScrollSection = styled.section`
+const ArrowContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: center;
-  overflow-x: hidden;
-
-  padding-top: 2rem;
-  padding-bottom: 7rem;
-  background-color: #ced9df;
-
-  @media screen and (max-width: 768px) {
-    padding-bottom: 2rem;
-  }
-
-  @media screen and (max-width: 1024px) {
-    height: max-content;
-  }
+  gap: 10px;
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  align-items: end;
-
-  width: 100%;
-  gap: 0.5rem;
+const ArrowButton = styled(IconButton)`
+  color: #2c4a63;
+  background-color: rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 `;
