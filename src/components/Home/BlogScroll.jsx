@@ -13,22 +13,27 @@ export default function BlogScroll() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const cachedData = localStorage.getItem('blogData');
-      const cachedTime = localStorage.getItem('blogDataTime');
-      const cacheDuration = 7 * 24 * 60 * 60 * 1000; // 7 dias
+      // const cachedData = localStorage.getItem('blogData');
+      // const cachedTime = localStorage.getItem('blogDataTime');
+      // const cacheDuration = 7 * 24 * 60 * 60 * 1000; // 7 dias
 
-      if (cachedData && cachedTime && Date.now() - cachedTime < cacheDuration) {
-        setData(JSON.parse(cachedData));
-      } else {
-        try {
-          const response = await axios.get(API_URL);
-          setData(response.data);
-          localStorage.setItem('blogData', JSON.stringify(response.data));
-          localStorage.setItem('blogDataTime', Date.now().toString());
-        } catch (error) {
-          console.error(error);
-        }
+      // if (cachedData && cachedTime && Date.now() - cachedTime < cacheDuration) {
+      //   setData(JSON.parse(cachedData));
+      // } else {
+      try {
+        // const response = await axios.get(API_URL);
+        const response = await axios.get(
+          'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@psicarolinagporto'
+        );
+        console.log(response);
+        console.log(response.data);
+        setData(response.data);
+        // localStorage.setItem('blogData', JSON.stringify(response.data));
+        // localStorage.setItem('blogDataTime', Date.now().toString());
+      } catch (error) {
+        console.error(error);
       }
+      // }
     };
 
     fetchData();
@@ -56,7 +61,7 @@ export default function BlogScroll() {
           <ArrowBackIosIcon />
         </ArrowButton>
         <ScrollContainer ref={scrollContainerRef}>
-          {data && data.map((item) => <BlogCard key={item.id} item={item} />)}
+          {data && data.items.map((item) => <BlogCard key={item.id} item={item} />)}
         </ScrollContainer>
         <ArrowButton onClick={scrollRight}>
           <ArrowForwardIosIcon />
