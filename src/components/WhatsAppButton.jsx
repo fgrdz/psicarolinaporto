@@ -7,6 +7,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import zenklubIcon from '../assets/zenklub icon.png';
 // import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 // import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const StyledFab = styled(Fab)`
   background-color: #25d366 !important;
@@ -39,8 +40,8 @@ const WhatsAppButton = () => {
     <StyledStack direction={{ xs: 'row', sm: 'column' }} spacing={{ xs: 1, sm: 1, md: 1 }}>
       <StyledFab
         size="medium"
-        href="https://api.whatsapp.com/send?phone=5583996276657"
-        target="_blank"
+        component={Link}
+        to='/agendar-sessao'
         rel="noopener noreferrer"
       >
         <WhatsAppIcon style={{ color: 'white' }} />
