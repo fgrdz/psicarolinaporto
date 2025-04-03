@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CircularProgress } from '@mui/material';
 
 const ScheduleRedirect = () => {
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ const ScheduleRedirect = () => {
     
     const timer = setTimeout(() => {
       navigate('/');
-    }, 300);
+    }, 500);
 
     if (newWindow) {
       newWindow.focus();
@@ -40,7 +39,6 @@ const ScheduleRedirect = () => {
       alignItems: 'center',
       height: '100vh'
     }}>
-      <CircularProgress />
     </div>
   );
 };
