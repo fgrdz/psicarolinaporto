@@ -1,11 +1,16 @@
 /* eslint-disable no-unused-vars */
 import { Instagram, LinkedIn, WhatsApp } from '@mui/icons-material';
 import { Box, Button, IconButton } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function SocialButtons() {
   return (
     <Box>
-      <Button href="https://api.whatsapp.com/send?phone=5583996276657" target="_blank" variant="contained">
+      <Button 
+        component={Link}
+        to='/agendar-sessao'
+        variant="contained" 
+      >
         Agendar Sessão
       </Button>
       {/* <IconButton href="https://api.whatsapp.com/send?phone=5583996276657" target="_blank">
