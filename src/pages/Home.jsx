@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 import Info from '../components/Home/Info';
 
 import AboutMe from '../components/Home/AboutMe';
+import ImpactosPessoais from '../components/Home/ImpactosPessoais';
 import FAQ from '../components/Home/FAQ';
 import BlogScroll from '../components/Home/BlogScroll';
 import Footer from '../components/Home/Footer';
@@ -13,11 +14,12 @@ export default function Home() {
       <HomeSection id="#">
         <Info />
       </HomeSection>
-      <AboutMe />
+      <AboutMe path="sobre-mim" />
+      <ImpactosPessoais />
       <BlogScroll />
-      <Reviews/>
+      <Reviews />
       <FAQ />
-      <Footer/>
+      <Footer />
     </main>
   );
 }

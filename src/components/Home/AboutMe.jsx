@@ -13,19 +13,25 @@ export default function AboutMe() {
               <img id="profile-img" src={profile} alt="Main text" />
             </Profile>
             <StyledTypography color="white" variant="h4">
-              Quem sou eu?
+              Sobre mim
             </StyledTypography>
             <StyledTypography color="white" variant="h5">
               CRP 13/10290
             </StyledTypography>
             <StyledTypography variant="body1">
-            Sou Psicóloga formada (UEPB) com formação de 6 anos em pesquisa, extensão e monitoria, e psicanalista com formação permanente a partir da ética e técnica da psicanálise lacaniana, com mais de 4 anos de experiência. 
-            Trabalhar com pessoas sempre foi minha paixão e vocação de vida. 
-            A psicologia e a psicanálise foram o caminho que encontrei para chegar até elas e servir de porta-voz para elas encontrarem a sua própria voz.
+              Sou psicóloga formada pela UEPB, com mais de seis anos de pesquisa em saúde mental e formação contínua em
+              psicanálise lacaniana, além de cinco anos de experiência clínica. Trabalhar com pessoas sempre foi minha
+              paixão e vocação. Meu objetivo, a partir de uma escuta fundamentada na técnica, na ética e na teoria
+              lacaniana, é ser um instrumento de transformação para você. É pela via da palavra que acessamos o
+              inconsciente e as amarras que causam seu sofrer. Juntos, construiremos um espaço singular de escuta e
+              reconstrução, dedicado ao seu processo.
             </StyledTypography>
-            <StyledTypography variant="body1">
-            Na minha experiência na psicologia, já trabalhei com gestantes, adolescentes, mulheres em situação de vulnerabilidade, saúde mental e atenção psicossocial, além de diversas realidades de pessoas diferentes que lido diariamente na clínica.
-             Dentro dessas experiências, me identifiquei com a possibilidade de encontrar pessoas e a partir de uma escuta apoiada na técnica, ética e teoria, poder ser um instrumento de transformação para elas.{' '}
+            {/* <StyledTypography variant="body1">
+              Na minha experiência na psicologia, já trabalhei com gestantes, adolescentes, mulheres em situação de
+              vulnerabilidade, saúde mental e atenção psicossocial, além de diversas realidades de pessoas diferentes
+              que lido diariamente na clínica. Dentro dessas experiências, me identifiquei com a possibilidade de
+              encontrar pessoas e a partir de uma escuta apoiada na técnica, ética e teoria, poder ser um instrumento de
+              transformação para elas.{' '}
             </StyledTypography>
             <StyledTypography variant="body1">
               Caso se interesse, te recebo em um espaço que criei na minha clínica de acolhimento da angústia e do
@@ -33,10 +39,15 @@ export default function AboutMe() {
               arte{' '}
               <a href="https://www.instagram.com/psicarolinagporto" target="_blank">
                 (@psicarolinagporto)
-              </a>, além do meu lattes com minha trajetória acadêmica{' '}
-              <a href='http://lattes.cnpq.br/3775029714613595' target='blank'>(lattes). </a> 
-              <br/>Se sinta à vontade para conferir meu trabalho por lá também. Seja bem vinda(o) e dúvida é só entrar em contato. Até!{' '}
-            </StyledTypography>
+              </a>
+              , além do meu lattes com minha trajetória acadêmica{' '}
+              <a href="http://lattes.cnpq.br/3775029714613595" target="blank">
+                (lattes).{' '}
+              </a>
+              <br />
+              Se sinta à vontade para conferir meu trabalho por lá também. Seja bem vinda(o) e dúvida é só entrar em
+              contato. Até!{' '}
+            </StyledTypography> */}
           </Typography>
         </Box>
       </Stack>

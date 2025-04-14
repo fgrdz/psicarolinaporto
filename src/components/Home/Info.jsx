@@ -22,16 +22,38 @@ export default function Info() {
     <Stack
       direction={{ xs: 'column-reverse', sm: 'row' }}
       spacing={{ xs: 1, sm: 2, md: 4 }}
-      sx={{ alignItems: 'center' }}
+      sx={{ alignItems: 'center', marginTop: '50px' }}
+      id="inicio"
     >
-      <Box my={4} maxWidth="550px" display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
-        <Typography variant="h2">
-          Psicóloga e <br /> Psicanalista
+      <Box my={4} display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
+        <Typography variant="title" sx={{ fontSize: '24px', marginBottom: '8px' }}>
+          Vamos juntos escrever uma nova história de vida para além do seu sofrimento.
         </Typography>
-        <Typography variant="h3">
-          Ofereço a você um espaço de acolhimento pela via da palavra. Em um espaço livre de julgamentos é possível
-          construir novas elaborações e novas possibilidades de ser para além do sofrimento.
+        <Typography variant="h2" sx={{ fontSize: '20px', marginBottom: '8px', color: '#828282' }}>
+          Psicóloga e Psicanalista
         </Typography>
+        <Typography variant="h3" sx={{ fontSize: '16px', marginBottom: '8px' }}>
+          Você se sente ansiosa(o), deprimida(o), presa(o) em si mesma(o) ou distante de quem gostaria de ser? Se sente
+          sem conseguir amar, trabalhar ou se relacionar? Te convido a um novo espaço de escuta e acolhimento. Você não
+          precisa passar por isso sozinha(o). Vamos juntos através da fala, reconstruir sua história e transformar o que
+          hoje te faz sofrer.
+        </Typography>
+        <Typography variant="h3" sx={{ fontSize: '16px' }}>
+          – Psicóloga online
+        </Typography>
+        <Typography variant="h3" sx={{ fontSize: '16px' }}>
+          – Psicanalista lacaniana
+        </Typography>
+        <Typography variant="h3" sx={{ fontSize: '16px' }}>
+          – Psicanalista particular especializada
+        </Typography>
+        <Typography variant="h3" sx={{ fontSize: '16px' }}>
+          – Psicóloga no Brasil e no mundo
+        </Typography>
+        <Typography variant="h3" sx={{ fontSize: '16px' }}>
+          – Vamos ouvir o que seu sofrimento tem a dizer?
+        </Typography>
+
         <SocialButtons />
       </Box>
       <Profile>
@@ -79,8 +101,8 @@ const Avatar = styled.img`
 `;
 
 const Profile = styled.div`
-
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 400px;
 `;

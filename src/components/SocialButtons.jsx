@@ -6,12 +6,8 @@ import { Link } from 'react-router-dom';
 export default function SocialButtons() {
   return (
     <Box>
-      <Button 
-        component={Link}
-        to='/agendar-sessao'
-        variant="contained" 
-      >
-        Agendar Sessão
+      <Button component={Link} to="/agendar-sessao" variant="contained">
+        AGENDE SUA SESSÃO
       </Button>
       {/* <IconButton href="https://api.whatsapp.com/send?phone=5583996276657" target="_blank">
         <WhatsApp />

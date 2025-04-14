@@ -32,14 +32,19 @@ export default function FAQ() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography variant="body1">
-                  Regulamentada pela resolução CFP nº 11/2018, o atendimento é online consiste em um tratamento
+                  {/* Regulamentada pela resolução CFP nº 11/2018, o atendimento é online consiste em um tratamento
                   realizado pelo{' '}
                   <ZenklubLink href="https://zenklub.com.br/psicologos/carolina-guimaraes-porto/" target="_blank">
                     Zenklub
                   </ZenklubLink>{' '}
                   ou através de plataformas online de comunicação, como o Zoom ou o Google Meet. Após acertadas a data e
                   horário da sessão, enviarei um link para a plataforma escolhida para o início da sessão. Recomendo a
-                  sessão ser realizada em um ambiente que você se sinta a vontade e seguro para conversarmos.
+                  sessão ser realizada em um ambiente que você se sinta a vontade e seguro para conversarmos. */}
+                  Regulamentada pela resolução CFP nº 11/2018, o atendimento é online consiste em um tratamento
+                  realizado através de plataformas online de comunicação, como o Zoom ou o Google Meet. Após acertadas a
+                  data e horário da sessão, enviarei um link para a plataforma escolhida para o início da sessão.
+                  Recomendo a sessão ser realizada em um ambiente que você se sinta à vontade e seguro para
+                  conversarmos.
                 </Typography>
               </AccordionDetails>
             </Accordion>

@@ -52,7 +52,7 @@ export default function BlogScroll() {
   };
 
   return (
-    <Container id="blog-scroll">
+    <Container id="blog">
       <Typography variant="h4" color="#2c4a63" textAlign="center" margin="30px">
         Blog
       </Typography>

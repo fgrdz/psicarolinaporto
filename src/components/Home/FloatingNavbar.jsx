@@ -8,85 +8,45 @@ export default function FloatingNavbar() {
   const [activeNav, setActiveNav] = useState('#');
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const handleNavClick = (id) => {
+    setActiveNav(id);
+    setMenuOpen(false);
+    window.history.pushState(null, '', `${id}`);
   };
+
+  const links = [
+    { id: 'inicio', label: 'Home', offset: -140 },
+    { id: 'sobre-mim', label: 'Sobre mim', offset: -70 },
+    { id: 'impactos-pessoais', label: 'Impactos pessoais', offset: -70 },
+    { id: 'blog', label: 'Blog', offset: -70 },
+    { id: 'depoimentos', label: 'Depoimentos', offset: -70 },
+    { id: 'perguntas-frequentes', label: 'Perguntas frequentes', offset: -70 },
+  ];
 
   return (
     <>
       <Navbar activeNav={activeNav}>
-        <Link to="#" spy={true} smooth={true} offset={-140} duration={500} onClick={() => setActiveNav('#')}>
+        <Link to="inicio" spy={true} smooth={true} offset={-140} duration={500} onClick={() => handleNavClick('topo')}>
           <Logo src={logo} />
           <span>Carolina Guimarães Porto</span>
         </Link>
 
         <ul>
-          <li className={activeNav === '#' ? 'active' : ''}>
-            <Link
-              to="#"
-              spy={true}
-              smooth={true}
-              offset={-140}
-              duration={500}
-              onClick={() => {
-                setActiveNav('#');
-                toggleMenu();
-              }}
-            >
-              Home
-            </Link>
-          </li>
-          <li className={activeNav === 'sobre-mim' ? 'active' : ''}>
-            <Link
-              to="sobre-mim"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => {
-                setActiveNav('sobre-mim');
-                toggleMenu();
-              }}
-            >
-              Sobre mim
-            </Link>
-          </li>
-          <li className={activeNav === 'blog-scroll' ? 'active' : ''}>
-            <Link
-              to="blog-scroll"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => {
-                setActiveNav('blog-scroll');
-                toggleMenu();
-              }}
-            >
-              Blog
-            </Link>
-          </li>
-          <li className={activeNav === 'perguntas-frequentes' ? 'active' : ''}>
-            <Link
-              to="perguntas-frequentes"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => {
-                setActiveNav('perguntas-frequentes');
-                toggleMenu();
-              }}
-            >
-              Perguntas frequentes
-            </Link>
-          </li>
+          {links.map(({ id, label, offset }) => (
+            <li key={id} className={activeNav === id ? 'active' : ''}>
+              <Link to={id} spy={true} smooth={true} offset={offset} duration={500} onClick={() => handleNavClick(id)}>
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </Navbar>
 
       <MobileNavbar>
         <MobileHeader>
-          <Link to="#" spy={true} smooth={true} offset={-140} duration={500} onClick={() => setActiveNav('#')}>
+          <Link to="topo" spy={true} smooth={true} offset={-140} duration={500} onClick={() => handleNavClick('topo')}>
             <Logo src={logo} />
             <span>Carolina Guimarães Porto</span>
           </Link>
@@ -95,66 +55,20 @@ export default function FloatingNavbar() {
         {menuOpen && (
           <DropdownMenuOverlay onClick={toggleMenu}>
             <DropdownMenu>
-              <li className={activeNav === '#' ? 'active' : ''}>
-                <Link
-                  to="#"
-                  spy={true}
-                  smooth={true}
-                  offset={-140}
-                  duration={500}
-                  onClick={() => {
-                    setActiveNav('#');
-                    toggleMenu();
-                  }}
-                >
-                  Home
-                </Link>
-              </li>
-              <li className={activeNav === 'sobre-mim' ? 'active' : ''}>
-                <Link
-                  to="sobre-mim"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  onClick={() => {
-                    setActiveNav('sobre-mim');
-                    toggleMenu();
-                  }}
-                >
-                  Sobre mim
-                </Link>
-              </li>
-              <li className={activeNav === 'blog-scroll' ? 'active' : ''}>
-                <Link
-                  to="blog-scroll"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  onClick={() => {
-                    setActiveNav('blog-scroll');
-                    toggleMenu();
-                  }}
-                >
-                  Blog
-                </Link>
-              </li>
-              <li className={activeNav === 'perguntas-frequentes' ? 'active' : ''}>
-                <Link
-                  to="perguntas-frequentes"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  onClick={() => {
-                    setActiveNav('perguntas-frequentes');
-                    toggleMenu();
-                  }}
-                >
-                  Perguntas frequentes
-                </Link>
-              </li>
+              {links.map(({ id, label, offset }) => (
+                <li key={id} className={activeNav === id ? 'active' : ''}>
+                  <Link
+                    to={id}
+                    spy={true}
+                    smooth={true}
+                    offset={offset}
+                    duration={500}
+                    onClick={() => handleNavClick(id)}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </DropdownMenu>
           </DropdownMenuOverlay>
         )}

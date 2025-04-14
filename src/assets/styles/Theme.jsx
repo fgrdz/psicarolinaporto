@@ -17,6 +17,12 @@ const theme = createTheme({
       fontFamily: 'Clemente, sans-serif',
       color: '#2C4A63',
     },
+    title: {
+      color: '#2C4A63',
+      fontSize: '32px',
+      fontWeight: 500,
+      fontFamily: 'Clemente, sans-serif',
+    },
     h3: {
       color: '#828282',
       fontSize: '24px',
