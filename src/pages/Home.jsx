@@ -1,12 +1,12 @@
 import { styled } from 'styled-components';
-import Info from '../components/Home/Info';
+import Info from '../components/Home/Info/index';
 
-import AboutMe from '../components/Home/AboutMe';
-import ImpactosPessoais from '../components/Home/ImpactosPessoais';
-import FAQ from '../components/Home/FAQ';
-import BlogScroll from '../components/Home/BlogScroll';
-import Footer from '../components/Home/Footer';
-import Reviews from '../components/Home/Reviews';
+import AboutMe from '../components/Home/AboutMe/index';
+import ImpactosPessoais from '../components/Home/ImpactosPessoais/index';
+import FAQ from '../components/Home/FAQ/index';
+import BlogScroll from '../components/Home/BlogScroll/index';
+import Footer from '../components/Home/Footer/index';
+import Reviews from '../components/Home/Reviews/index';
 
 export default function Home() {
   return (

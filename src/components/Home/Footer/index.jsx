@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import { styled } from 'styled-components';
-import image from '../../assets/logotipo4.png';
+import image from '../../../assets/logotipo4.png';
 import { Instagram, LinkedIn } from '@mui/icons-material';
 
 export default function Footer() {
@@ -54,10 +54,7 @@ export default function Footer() {
         </ContentFooter>
       </ContainerFooter>
       <Copyrigth>
-        <Typography
-          variant="caption"
-          //   sx={{ display: 'flex', justifyContent: 'center', paddingBottom: '2rem', textAlign: 'center' }}
-        >
+        <Typography variant="caption">
           &copy; {currentYear} Desenvolvido por D&J Tech.
           <br />
           Todos os direitos reservados.
@@ -69,7 +66,6 @@ export default function Footer() {
 
 const ZenklubLink = styled.a`
   color: #7755e8;
-
   text-decoration: none;
   font-weight: 700;
 `;
@@ -77,6 +73,7 @@ const ZenklubLink = styled.a`
 const Copyrigth = styled.div`
   display: flex;
   justify-content: center;
+  padding-top: 20px;
   padding-bottom: 3rem;
   text-align: center;
 
@@ -85,26 +82,13 @@ const Copyrigth = styled.div`
   }
 `;
 
-// const Text = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   padding-bottom: 3rem;
-//   text-align: center;
-
-//   @media (max-width: 768px) {
-//     padding-bottom: 6rem;
-//   }
-// `;
-
 const ContainerFooter = styled.div`
   display: flex;
-
   align-items: center;
   align-content: center;
   justify-content: space-between;
   background-color: #f7f8fa;
   padding-top: 20px;
-  /* box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.06); */
   box-shadow: rgba(9, 30, 66, 0.1) 0px -1px 1px, rgba(9, 30, 66, 0.13) 0px -1px 1px;
 
   @media (max-width: 768px) {
@@ -117,7 +101,6 @@ const ContentFooter = styled.div`
   display: flex;
   width: 100%;
   gap: 100px;
-
   justify-content: center;
   max-height: 500px;
   align-items: center;
@@ -175,9 +158,7 @@ const FooterSection2 = styled.div`
 
 const SocialMediaIcons = styled.div`
   display: flex;
-  /* margin-left: 60px; */
   margin-top: 10px;
-  /* margin-bottom: 20px; */
 
   @media (max-width: 768px) {
     display: none;
@@ -194,4 +175,4 @@ const Logo = styled.img`
     height: 200px;
     margin-top: -40px;
   }
-`;
+`; 

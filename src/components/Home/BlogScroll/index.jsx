@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Typography, IconButton } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import BlogCard from './BlogCard';
+import BlogCard from '../BlogCard';
 
 export default function BlogScroll() {
   const [data, setData] = useState(null);
@@ -13,27 +13,16 @@ export default function BlogScroll() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // const cachedData = localStorage.getItem('blogData');
-      // const cachedTime = localStorage.getItem('blogDataTime');
-      // const cacheDuration = 7 * 24 * 60 * 60 * 1000; // 7 dias
-
-      // if (cachedData && cachedTime && Date.now() - cachedTime < cacheDuration) {
-      //   setData(JSON.parse(cachedData));
-      // } else {
       try {
-        // const response = await axios.get(API_URL);
         const response = await axios.get(
           'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@psicarolinagporto'
         );
         console.log(response);
         console.log(response.data);
         setData(response.data);
-        // localStorage.setItem('blogData', JSON.stringify(response.data));
-        // localStorage.setItem('blogDataTime', Date.now().toString());
       } catch (error) {
         console.error(error);
       }
-      // }
     };
 
     fetchData();
@@ -101,4 +90,4 @@ const ArrowButton = styled(IconButton)`
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);
   }
-`;
+`; 
