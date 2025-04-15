@@ -19,7 +19,7 @@ export default function impactosPessoais() {
         direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1, sm: 1, md: 4 }}
         my={4}
-        maxWidth="880px"
+        maxWidth="960px"
         display="flex"
         flexDirection="row"
         alignItems="flexStart"
@@ -28,42 +28,42 @@ export default function impactosPessoais() {
       >
         <Box display="flex" flexDirection="column" alignItems="center">
           <Icon src={angustia} alt="Angústia" />
-          <StyledTypography variant="body1" color="primary" sx={{ mt: 1, textAlign: 'center' }}>
+          <StyledTypography variant="body1" color="primary" sx={{ mt: 1 }}>
             Reconhecer e ressignificar sintomas, dores e angústia.
           </StyledTypography>
         </Box>
 
         <Box display="flex" flexDirection="column" alignItems="center">
           <Icon src={desejo} alt="Desejo" />
-          <StyledTypography variant="body1" color="primary" sx={{ mt: 1, textAlign: 'center' }}>
+          <StyledTypography variant="body1" color="primary" sx={{ mt: 1}}>
             Aproximar-se da construção de um desejo para você.
           </StyledTypography>
         </Box>
 
         <Box display="flex" flexDirection="column" alignItems="center">
           <Icon src={protagonista} alt="Protagonista" />
-          <StyledTypography variant="body1" color="primary" sx={{ mt: 1, textAlign: 'center' }}>
+          <StyledTypography variant="body1" color="primary" sx={{ mt: 1 }}>
             Tomar posição de protagonista em relação à sua vida.
           </StyledTypography>
         </Box>
 
         <Box display="flex" flexDirection="column" alignItems="center">
           <Icon src={prisoes} alt="Prisões" />
-          <StyledTypography variant="body1" color="primary" sx={{ mt: 1, textAlign: 'center' }}>
+          <StyledTypography variant="body1" color="primary" sx={{ mt: 1}}>
             Se desamarrar de prisões que as relações te colocam.
           </StyledTypography>
         </Box>
 
         <Box display="flex" flexDirection="column" alignItems="center">
           <Icon src={padroes} alt="Padrões" />
-          <StyledTypography variant="body1" color="primary" sx={{ mt: 1, textAlign: 'center' }}>
+          <StyledTypography variant="body1" color="primary" sx={{ mt: 1}}>
             Parar de repetir padrões que você nunca percebeu.
           </StyledTypography>
         </Box>
 
         <Box display="flex" flexDirection="column" alignItems="center">
           <Icon src={inconsciente} alt="Inconsciente" />
-          <StyledTypography variant="body1" color="primary" sx={{ mt: 1, textAlign: 'center' }}>
+          <StyledTypography variant="body1" color="primary" sx={{ mt: 1}}>
             Entrar em contato com um inconsciente que te move como sujeito.
           </StyledTypography>
         </Box>
@@ -73,7 +73,7 @@ export default function impactosPessoais() {
 }
 
 const Icon = styled.img`
-  width: 40px;
+  width: 60px;
   margin-bottom: 10px;
 `;
 
