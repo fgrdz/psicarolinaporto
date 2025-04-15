@@ -88,7 +88,7 @@ const Logo = styled.img`
 `;
 
 const Navbar = styled.div`
-  background: rgba(247, 248, 250, 0.89);
+  background: #e4e4e6 ;
   position: fixed;
   z-index: 2;
   display: flex;

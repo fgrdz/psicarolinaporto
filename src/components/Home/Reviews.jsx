@@ -62,6 +62,11 @@ const ReviewSection = styled.div`
   gap: 20px;
   scroll-behavior: smooth;
 
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+    gap:14px;
+    margin-top: -16px;
+  }
   &::-webkit-scrollbar {
     display: none;
   }
@@ -77,11 +82,23 @@ const ReviewCard = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0; 
+    display: none; 
+  }
+
+  /* Firefox */
+  scrollbar-width: none;
+  
+  /* Edge/IE */
+  -ms-overflow-style: none;
   @media screen and (max-width: 768px) {
-    width: 300px;
-    min-width: 300px;
+    width: 250px;
+    min-width: 200px;
     padding: 30px;
-    height: 300px;
+    height: 200px;
+    text-align: left;
   }
 `;
 
@@ -100,11 +117,6 @@ const ReviewerInfo = styled.div`
 const ReviewerName = styled.span`
   font-weight: bold;
   color: #2c4a63;
-`;
-
-const ReviewDate = styled.span`
-  font-size: 14px;
-  color: #777;
 `;
 
 const ArrowContainer = styled.div`
