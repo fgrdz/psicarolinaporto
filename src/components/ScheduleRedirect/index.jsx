@@ -43,4 +43,4 @@ const ScheduleRedirect = () => {
   );
 };
 
-export default ScheduleRedirect;
+export default ScheduleRedirect; 

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-import profile from '../../assets/profile-3.jpg';
+import profile from '../../../assets/profile-3.jpg';
 import { Box, Stack, Typography } from '@mui/material';
 
 export default function AboutMe() {
@@ -26,28 +25,6 @@ export default function AboutMe() {
               inconsciente e as amarras que causam seu sofrer. Juntos, construiremos um espaço singular de escuta e
               reconstrução, dedicado ao seu processo.
             </StyledTypography>
-            {/* <StyledTypography variant="body1">
-              Na minha experiência na psicologia, já trabalhei com gestantes, adolescentes, mulheres em situação de
-              vulnerabilidade, saúde mental e atenção psicossocial, além de diversas realidades de pessoas diferentes
-              que lido diariamente na clínica. Dentro dessas experiências, me identifiquei com a possibilidade de
-              encontrar pessoas e a partir de uma escuta apoiada na técnica, ética e teoria, poder ser um instrumento de
-              transformação para elas.{' '}
-            </StyledTypography>
-            <StyledTypography variant="body1">
-              Caso se interesse, te recebo em um espaço que criei na minha clínica de acolhimento da angústia e do
-              sofrimento. Também tenho um perfil profissional onde discuto questões acerca da psicanálise, psicologia e
-              arte{' '}
-              <a href="https://www.instagram.com/psicarolinagporto" target="_blank">
-                (@psicarolinagporto)
-              </a>
-              , além do meu lattes com minha trajetória acadêmica{' '}
-              <a href="http://lattes.cnpq.br/3775029714613595" target="blank">
-                (lattes).{' '}
-              </a>
-              <br />
-              Se sinta à vontade para conferir meu trabalho por lá também. Seja bem vinda(o) e dúvida é só entrar em
-              contato. Até!{' '}
-            </StyledTypography> */}
           </Typography>
         </Box>
       </Stack>
@@ -102,4 +79,4 @@ const Profile = styled.div`
       box-shadow: none;
     }
   }
-`;
+`; 

@@ -41,4 +41,4 @@ export const GoogleAdsConversionTracker = () => {
     }, []);
   
     return null;
-  };
+  }; 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ReviewsData from '../Reviews/reviews.json';
+import ReviewsData from '../../Reviews/reviews.json';
 import { Typography, IconButton } from '@mui/material';
 import { useRef } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -35,7 +35,6 @@ export default function Reviews() {
               <ReviewText>{review.review}</ReviewText>
               <ReviewerInfo>
                 <ReviewerName>{review.nome}</ReviewerName>
-                {/* <ReviewDate>{review.data}</ReviewDate> */}
               </ReviewerInfo>
             </ReviewCard>
           ))}
@@ -131,4 +130,4 @@ const ArrowButton = styled(IconButton)`
   &:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
-`;
+`; 

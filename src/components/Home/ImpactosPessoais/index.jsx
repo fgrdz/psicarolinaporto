@@ -1,13 +1,11 @@
 import styled from 'styled-components';
-
-import profile from '../../assets/profile-3.jpg';
 import { Box, Stack, Typography } from '@mui/material';
-import angustia from '../../assets/fear_8541273.png';
-import desejo from '../../assets/lotus_11063763.png';
-import protagonista from '../../assets/employee_1365473.png';
-import inconsciente from '../../assets/vision_5165372.png';
-import prisoes from '../../assets/prisoner_4633714.png';
-import padroes from '../../assets/planning_4295945.png';
+import angustia from '../../../assets/fear_8541273.png';
+import desejo from '../../../assets/lotus_11063763.png';
+import protagonista from '../../../assets/employee_1365473.png';
+import inconsciente from '../../../assets/vision_5165372.png';
+import prisoes from '../../../assets/prisoner_4633714.png';
+import padroes from '../../../assets/planning_4295945.png';
 
 export default function impactosPessoais() {
   return (
@@ -98,4 +96,4 @@ const AboutMeSection = styled.section`
   @media screen and (max-width: 1024px) {
     height: max-content;
   }
-`;
+`; 
