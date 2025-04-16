@@ -29,7 +29,7 @@ export default function Info() {
         <Typography variant="h1" sx={{ fontSize: '28px', marginBottom: '8px' }}>
           Vamos juntos escrever uma nova história de vida para além do seu sofrimento.
         </Typography>
-        <Typography variant="h2" sx={{ fontSize: '20px', marginBottom: '8px', color: '#828282' }}>
+        <Typography variant="h2" sx={{ fontSize: '20px', marginBottom: '8px', color: '#4e4e4e' }}>
           Psicóloga e Psicanalista
         </Typography>
         <Typography variant="h3" sx={{ fontSize: '16px', marginBottom: '8px' }}>

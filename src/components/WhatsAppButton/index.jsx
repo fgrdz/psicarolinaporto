@@ -31,11 +31,13 @@ const StyledStack = styled(Stack)`
 `;
 
 const WhatsAppButton = () => {
+  const encodedMessage = "Olá, Carolina! Tenho interesse no tratamento psicanalítico. Poderia me passar mais informações?";
+  
   return (
     <StyledStack direction={{ xs: 'row', sm: 'column' }} spacing={{ xs: 1, sm: 1, md: 1 }}>
       <StyledFab
         size="medium"
-        href="https://api.whatsapp.com/send?phone=5583996276657"
+        href={`https://api.whatsapp.com/send?phone=5583996276657?text=${encodedMessage}`}
         target="_blank"
         rel="noopener noreferrer"
       >
