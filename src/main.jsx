@@ -7,12 +7,15 @@ import './assets/styles/style.css';
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './assets/styles/Theme.jsx';
+import { AppProvider } from './components/hooks/context.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <App />
+      <AppProvider>
+        <App />
+      </AppProvider>
     </ThemeProvider>
   </React.StrictMode>
 );
