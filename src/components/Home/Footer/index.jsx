@@ -20,7 +20,7 @@ export default function Footer() {
               Campina Grande, Paraíba
             </Typography>
             <Typography variant="body1" sx={{ fontSize: '14px' }}>
-              E-mail: carolinagporto7@gmail.com
+              E-mail: psicarolinagporto@gmail.com
             </Typography>
             <Typography variant="body1" sx={{ fontSize: '14px' }}>
               Contato: +55 83 9627-6657
@@ -175,4 +175,4 @@ const Logo = styled.img`
     height: 200px;
     margin-top: -40px;
   }
-`; 
+`;
