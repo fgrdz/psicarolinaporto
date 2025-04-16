@@ -27,7 +27,7 @@ export default function Info() {
     >
       <Box my={4} display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
         <Typography variant="title" sx={{ fontSize: '24px', marginBottom: '8px' }}>
-          Vamos juntos escrever uma nova história de vida para além do seu sofrimento.
+          Vamos escrever uma nova história para além do seu sofrimento.
         </Typography>
         <Typography variant="h2" sx={{ fontSize: '20px', marginBottom: '8px', color: '#828282' }}>
           Psicóloga e Psicanalista
