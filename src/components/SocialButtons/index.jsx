@@ -1,16 +1,27 @@
 /* eslint-disable no-unused-vars */
 import { Instagram, LinkedIn, WhatsApp } from '@mui/icons-material';
 import { Box, Button, IconButton } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useApp } from '../hooks/context';
+import { useState } from 'react';
 
 export default function SocialButtons() {
+  const navigate = useNavigate();
+  const {setOpenWhatsApp} = useApp();
+
+  const handleWhatsAppClick = () => {
+    setOpenWhatsApp(true); 
+    
+    navigate("/agendar-sessao");
+  };
+
   return (
     <Box marginTop={4} sx={{
       display: 'flex',
       justifyContent: 'center'
     }}>
-      <ButtonSchedule component={Link} to="/agendar-sessao" variant="contained">
+      <ButtonSchedule onClick={handleWhatsAppClick} variant="contained">
         AGENDE SUA SESSÃO
       </ButtonSchedule>
     </Box>
