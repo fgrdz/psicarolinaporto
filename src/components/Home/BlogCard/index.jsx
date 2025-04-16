@@ -9,8 +9,6 @@ export default function BlogCard({ item }) {
 
   useEffect(() => {
     const imageUrlRegex = /<img[^>]+src=["']([^"']+)["']/;
-    // const paragraphRegex = /<p>(.*?)<\/p>/;
-    // const firstParagraphMatch = item.content.match(paragraphRegex);
     setImageUrl(item.content.match(imageUrlRegex)[1]);
   }, []);
 
@@ -27,11 +25,6 @@ export default function BlogCard({ item }) {
         <Typography gutterBottom variant="h5" color="primary" component="div" sx={{ textAlign: 'start' }}>
           {item.title}
         </Typography>
-        {/* {firstParagraph && (
-          <StyledTypography variant="body2" color="text.secondary">
-            {firstParagraph}
-          </StyledTypography>
-        )} */}
       </StyledCardContent>
     </Stack>
   );
@@ -55,4 +48,4 @@ const StyledCard = styled(Card)`
     object-fit: cover;
     height: 300px;
   }
-`;
+`; 

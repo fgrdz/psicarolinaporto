@@ -1,9 +1,9 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import FloatingNavbar from './components/Home/FloatingNavbar';
-import { GoogleAdsConversionTracker } from './components/Script';
-import WhatsAppButton from './components/WhatsAppButton';
+import FloatingNavbar from './components/Home/FloatingNavbar/index';
+import { GoogleAdsConversionTracker } from './components/Script/index';
+import WhatsAppButton from './components/WhatsAppButton/index';
 import Home from './pages/Home';
-import ScheduleRedirect from './components/ScheduleRedirect';
+import ScheduleRedirect from './components/ScheduleRedirect/index';
 
 function App() {
   return (

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import profile from '../../assets/profile-1.jpg';
+import profile from '../../../assets/profile-1.jpg';
 import { styled } from 'styled-components';
 import { Box, Stack, Typography } from '@mui/material';
-import SocialButtons from '../SocialButtons';
+import SocialButtons from '../../SocialButtons';
 
 export default function Info() {
   const [scrollOffset, setScrollOffset] = useState(0);
@@ -26,10 +26,10 @@ export default function Info() {
       id="inicio"
     >
       <Box my={4} display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
-        <Typography variant="title" sx={{ fontSize: '24px', marginBottom: '8px' }}>
-          Vamos escrever uma nova história para além do seu sofrimento.
+        <Typography variant="h1" sx={{ fontSize: '28px', marginBottom: '8px' }}>
+          Vamos juntos escrever uma nova história de vida para além do seu sofrimento.
         </Typography>
-        <Typography variant="h2" sx={{ fontSize: '20px', marginBottom: '8px', color: '#828282' }}>
+        <Typography variant="h2" sx={{ fontSize: '20px', marginBottom: '8px', color: '#4e4e4e' }}>
           Psicóloga e Psicanalista
         </Typography>
         <Typography variant="h3" sx={{ fontSize: '16px', marginBottom: '8px' }}>
@@ -72,11 +72,6 @@ const Avatar = styled.img`
   margin-right: auto;
   object-position: top;
 
-  /* 
-  -webkit-box-shadow: 45px -28px 0.6px 0px rgba(44, 74, 99, 1);
-  -moz-box-shadow: 45px -28px 0.6px 0px rgba(44, 74, 99, 1);
-  box-shadow: 45px -28px 0.6px 0px rgba(44, 74, 99, 1); */
-
   -webkit-box-shadow: ${({ scrollOffset }) =>
     `${-(scrollOffset / 10) + 45}px -${scrollOffset / 100}px 0.6px 0px rgba(44, 74, 99, 1)`};
   -moz-box-shadow: ${({ scrollOffset }) =>
@@ -84,7 +79,7 @@ const Avatar = styled.img`
   box-shadow: ${({ scrollOffset }) =>
     `${-(scrollOffset / 10) + 45}px -${scrollOffset / 100}px 0.6px 0px rgba(44, 74, 99, 1)`};
 
-  transition: box-shadow 0.3s ease; /* Adiciona a transição */
+  transition: box-shadow 0.3s ease;
 
   @media (max-width: 768px) {
     margin-top: 80px;
@@ -105,4 +100,4 @@ const Profile = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 400px;
-`;
+`; 

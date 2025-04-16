@@ -1,12 +1,8 @@
-// WhatsAppButton.js
-
 import styled from 'styled-components';
 import { Fab, Stack } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import zenklubIcon from '../assets/zenklub icon.png';
-// import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
-// import { Link } from 'react-scroll';
+import zenklubIcon from '../../assets/zenklub icon.png';
 
 const StyledFab = styled(Fab)`
   background-color: #25d366 !important;
@@ -35,11 +31,13 @@ const StyledStack = styled(Stack)`
 `;
 
 const WhatsAppButton = () => {
+  const encodedMessage = "Olá, Carolina! Tenho interesse no tratamento psicanalítico. Poderia me passar mais informações?";
+
   return (
     <StyledStack direction={{ xs: 'row', sm: 'column' }} spacing={{ xs: 1, sm: 1, md: 1 }}>
       <StyledFab
         size="medium"
-        href="https://api.whatsapp.com/send?phone=5583996276657"
+        href={`https://wa.me/5583996276657?text=${encodedMessage}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -61,13 +59,6 @@ const WhatsAppButton = () => {
       >
         <LogoImg src={zenklubIcon} />
       </ZenklubFab>
-      {/* <Link to="#" spy={true} smooth={true} offset={-140} duration={500}>
-        <Tooltip title="Ir para o topo" placement="left">
-          <Fab size="medium">
-            <KeyboardArrowUp />
-          </Fab>
-        </Tooltip>
-      </Link> */}
     </StyledStack>
   );
 };
@@ -78,4 +69,4 @@ const LogoImg = styled.img`
   border-radius: 50%;
 `;
 
-export default WhatsAppButton;
+export default WhatsAppButton; 

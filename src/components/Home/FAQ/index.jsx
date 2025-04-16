@@ -3,7 +3,7 @@
 import { styled } from 'styled-components';
 import { Box, Stack, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import SocialButtons from '../SocialButtons';
+import SocialButtons from '../../SocialButtons';
 
 export default function FAQ() {
   return (
@@ -32,14 +32,6 @@ export default function FAQ() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography variant="body1">
-                  {/* Regulamentada pela resolução CFP nº 11/2018, o atendimento é online consiste em um tratamento
-                  realizado pelo{' '}
-                  <ZenklubLink href="https://zenklub.com.br/psicologos/carolina-guimaraes-porto/" target="_blank">
-                    Zenklub
-                  </ZenklubLink>{' '}
-                  ou através de plataformas online de comunicação, como o Zoom ou o Google Meet. Após acertadas a data e
-                  horário da sessão, enviarei um link para a plataforma escolhida para o início da sessão. Recomendo a
-                  sessão ser realizada em um ambiente que você se sinta a vontade e seguro para conversarmos. */}
                   Regulamentada pela resolução CFP nº 11/2018, o atendimento é online consiste em um tratamento
                   realizado através de plataformas online de comunicação, como o Zoom ou o Google Meet. Após acertadas a
                   data e horário da sessão, enviarei um link para a plataforma escolhida para o início da sessão.
@@ -72,7 +64,6 @@ export default function FAQ() {
 
 const ZenklubLink = styled.a`
   color: #7755e8;
-
   text-decoration: none;
   font-weight: 700;
 `;
@@ -88,4 +79,4 @@ const FAQSection = styled.section`
   @media screen and (max-width: 1024px) {
     height: max-content;
   }
-`;
+`; 

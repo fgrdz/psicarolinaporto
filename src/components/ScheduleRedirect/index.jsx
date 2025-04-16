@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 const ScheduleRedirect = () => {
   const navigate = useNavigate();
-  const whatsappUrl = "https://api.whatsapp.com/send?phone=5583996276657";
+  const encodedMessage = "Olá, Carolina! Tenho interesse no tratamento psicanalítico. Poderia me passar mais informações?";
+
+  const whatsappUrl =  `https://wa.me/5583996276657?text=${encodedMessage}`;
 
   useEffect(() => {
     if (window.gtag) {
@@ -43,4 +45,4 @@ const ScheduleRedirect = () => {
   );
 };
 
-export default ScheduleRedirect;
+export default ScheduleRedirect; 

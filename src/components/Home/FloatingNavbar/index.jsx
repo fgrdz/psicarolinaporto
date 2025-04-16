@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { Link } from 'react-scroll';
 import { useState } from 'react';
-import logo from '../../assets/logo-normal.png';
+import logo from '../../../assets/logo-normal.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function FloatingNavbar() {
@@ -88,7 +88,7 @@ const Logo = styled.img`
 `;
 
 const Navbar = styled.div`
-  background: rgba(247, 248, 250, 0.89);
+  background: #f7f8fa ;
   position: fixed;
   z-index: 2;
   display: flex;
@@ -250,4 +250,4 @@ const DropdownMenu = styled.ul`
       }
     }
   }
-`;
+`; 
