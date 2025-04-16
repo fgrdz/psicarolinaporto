@@ -5,7 +5,7 @@ const ScheduleRedirect = () => {
   const navigate = useNavigate();
   const encodedMessage = "Olá, Carolina! Tenho interesse no tratamento psicanalítico. Poderia me passar mais informações?";
 
-  const whatsappUrl =  `https://wa.me/phone=5583996276657?text=${encodedMessage}`;
+  const whatsappUrl =  `https://wa.me/5583996276657?text=${encodedMessage}`;
 
   useEffect(() => {
     if (window.gtag) {
