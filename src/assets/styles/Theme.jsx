@@ -29,9 +29,9 @@ const theme = createTheme({
       fontFamily: 'Clemente, sans-serif',
     },
     h3: {
-      color: '#767676',
+      color: '#636363',
       fontSize: '24px',
-      fontWeight: 300,
+      fontWeight: 400,
     },
     h4: {
       fontWeight: 500,
@@ -40,7 +40,7 @@ const theme = createTheme({
       color: '#2C4A63',
     },
     h5: {
-      color: '#767676',
+      color: '#636363',
       fontSize: '20px',
       fontWeight: 300,
       fontStyle: 'italic',
