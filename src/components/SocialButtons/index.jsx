@@ -9,11 +9,21 @@ import { useState } from 'react';
 export default function SocialButtons() {
   const navigate = useNavigate();
   const {setOpenWhatsApp} = useApp();
+  const encodedMessage = "Olá, Carolina! Tenho interesse no tratamento psicanalítico. Poderia me passar mais informações?";
 
   const handleWhatsAppClick = () => {
-    setOpenWhatsApp(true); 
-    
-    navigate("/agendar-sessao");
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-16855079403/t5nhCJDAmrMaEOuzkOU-',
+        'value': 1.0,
+        'currency': 'BRL'
+      });
+    }    
+    window.open(
+      `https://wa.me/5583996276657?text=${encodedMessage}`,
+      '_blank',
+      'noopener,noreferrer'
+    );
   };
 
   return (
@@ -21,7 +31,9 @@ export default function SocialButtons() {
       display: 'flex',
       justifyContent: 'center'
     }}>
-      <ButtonSchedule onClick={handleWhatsAppClick} variant="contained">
+      <ButtonSchedule 
+        onClick={handleWhatsAppClick}
+        variant="contained">
         AGENDE SUA SESSÃO
       </ButtonSchedule>
     </Box>
