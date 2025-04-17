@@ -7,8 +7,6 @@ import { useApp } from '../hooks/context';
 import { useState } from 'react';
 
 export default function SocialButtons() {
-  const navigate = useNavigate();
-  const {setOpenWhatsApp} = useApp();
   const encodedMessage = "Olá, Carolina! Tenho interesse no tratamento psicanalítico. Poderia me passar mais informações?";
 
   const handleWhatsAppClick = () => {

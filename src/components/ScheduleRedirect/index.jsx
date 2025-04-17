@@ -10,8 +10,7 @@ const ScheduleRedirect = () => {
   const hasOpenedRef = useRef(false);
 
   useEffect(() => {
-    if (openWhatsApp && !hasOpenedRef.current) {
-      hasOpenedRef.current = true;
+    
       if (window.gtag) {
         window.gtag('event', 'conversion', {
           'send_to': 'AW-16855079403/t5nhCJDAmrMaEOuzkOU-',
@@ -28,7 +27,6 @@ const ScheduleRedirect = () => {
 
       navigate('/');
 
-    }
   }, [navigate, openWhatsApp]); 
 
   return (
