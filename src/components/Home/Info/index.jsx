@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import profile from '../../../assets/profile-1.jpg';
 import { styled } from 'styled-components';
 import { Box, Stack, Typography } from '@mui/material';
-import SocialButtons from '../SocialButtons';
+import SocialButtons from '../../SocialButtons';
 
 export default function Info() {
   const [scrollOffset, setScrollOffset] = useState(0);
