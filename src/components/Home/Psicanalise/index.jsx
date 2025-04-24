@@ -5,7 +5,7 @@ import SocialButtons from '../../SocialButtons';
 
 export default function PsicanaliseSection () {
     return(
-        <ContainerSection>
+        <ContainerSection id='psicanalise'>
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} sx={{ alignItems: 'center' }}>
                 <Box my={4} maxWidth="880px" display="flex" flexDirection="column" alignItems="flexStart" gap={2} p={2}>
                   <Typography>

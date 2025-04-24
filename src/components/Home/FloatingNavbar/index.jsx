@@ -19,6 +19,7 @@ export default function FloatingNavbar() {
   const links = [
     { id: 'inicio', label: 'Home', offset: -140 },
     { id: 'sobre-mim', label: 'Sobre mim', offset: -70 },
+    { id: 'psicanalise', label: 'Psicanálise', offset: -70 },
     { id: 'impactos-pessoais', label: 'Impactos pessoais', offset: -70 },
     { id: 'blog', label: 'Blog', offset: -70 },
     { id: 'depoimentos', label: 'Depoimentos', offset: -70 },
