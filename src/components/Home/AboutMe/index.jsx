@@ -18,12 +18,12 @@ export default function AboutMe() {
               CRP 13/10290
             </StyledTypography>
             <StyledTypography variant="body1">
-              Sou psicóloga formada pela UEPB, com mais de seis anos de pesquisa em saúde mental e formação contínua em
-              psicanálise lacaniana, além de cinco anos de experiência clínica. Trabalhar com pessoas sempre foi minha
-              paixão e vocação. Meu objetivo, a partir de uma escuta fundamentada na técnica, na ética e na teoria
-              lacaniana, é ser um instrumento de transformação para você. É pela via da palavra que acessamos o
-              inconsciente e as amarras que causam seu sofrer. Juntos, construiremos um espaço singular de escuta e
-              reconstrução, dedicado ao seu processo.
+            Sou psicóloga formada pela UEPB, com mais de <strong>seis anos de pesquisa em saúde mental</strong> e formação contínua em psicanálise lacaniana, 
+            além de <strong>cinco anos de experiência clínica</strong>. Atualmente, <strong>atendo brasileiros no Brasil e no exterior de maneira remota/online</strong>, 
+            realizo supervisão dos meus casos clínicos e organizo vários grupos de estudos focados na psicanálise e na clínica lacaniana. Trabalhar com pessoas sempre foi 
+            minha paixão e vocação. Meu objetivo, a partir de uma escuta fundamentada na técnica, na ética e na teoria lacaniana, é ser um instrumento de transformação para 
+            você. É pela via da palavra que acessamos o inconsciente e as amarras que causam seu sofrer. <strong>Juntos, construiremos um espaço singular de escuta e reconstrução, 
+            dedicado ao seu processo</strong>.
             </StyledTypography>
           </Typography>
         </Box>
@@ -46,6 +46,10 @@ const AboutMeSection = styled.section`
   padding-bottom: 2rem;
   background-color: #2c4a63;
   color: white !important;
+
+  strong{
+    font-weight: 700;
+  }
 
   @media screen and (max-width: 1024px) {
     height: max-content;

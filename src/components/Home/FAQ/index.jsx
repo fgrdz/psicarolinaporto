@@ -18,7 +18,7 @@ export default function FAQ() {
           <Stack>
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="body2">Quanto tempo dura?</Typography>
+                <Typography variant="body2">Quanto tempo dura o tratamento psicanalítico?</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography variant="body1">
@@ -48,6 +48,16 @@ export default function FAQ() {
                 <Typography variant="body1">Ofereço atendimento para adultos.</Typography>
               </AccordionDetails>
             </Accordion>
+            <Accordion>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="body2">Você atende por plano de saúde?</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography variant="body1">
+                  Não atendo por plano de saúde, mas posso fornecer recibos para reembolsos de planos, assim como imposto de renda.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
           </Stack>
 
           <Typography sx={{ fontWeight: '700', fontSize: '12px', textAlign: 'center', padding: '30px 50px 50px 30px' }}>
@@ -62,11 +72,6 @@ export default function FAQ() {
   );
 }
 
-const ZenklubLink = styled.a`
-  color: #7755e8;
-  text-decoration: none;
-  font-weight: 700;
-`;
 
 const FAQSection = styled.section`
   display: flex;

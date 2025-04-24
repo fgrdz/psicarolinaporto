@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { Box, Stack, Typography } from '@mui/material';
 import angustia from '../../../assets/fear_8541273.png';
-import desejo from '../../../assets/lotus_11063763.png';
 import protagonista from '../../../assets/employee_1365473.png';
-import inconsciente from '../../../assets/vision_5165372.png';
 import prisoes from '../../../assets/prisoner_4633714.png';
 import padroes from '../../../assets/planning_4295945.png';
 
@@ -11,7 +9,7 @@ export default function impactosPessoais() {
   return (
     <AboutMeSection id="impactos-pessoais">
       <Typography variant="h4" color="#2c4a63" textAlign="center" margin="30px">
-        Impactos Pessoais
+        Impactos do tratamento      
       </Typography>
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
@@ -32,16 +30,9 @@ export default function impactosPessoais() {
         </Box>
 
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Icon src={desejo} alt="Desejo" />
-          <StyledTypography variant="body1" color="primary" sx={{ mt: 1}}>
-            Aproximar-se da construção de um desejo para você.
-          </StyledTypography>
-        </Box>
-
-        <Box display="flex" flexDirection="column" alignItems="center">
           <Icon src={protagonista} alt="Protagonista" />
           <StyledTypography variant="body1" color="primary" sx={{ mt: 1 }}>
-            Tomar posição de protagonista em relação à sua vida.
+            Assumir as rédeas da sua vida e fazer escolhas com mais consciência.
           </StyledTypography>
         </Box>
 
@@ -55,16 +46,10 @@ export default function impactosPessoais() {
         <Box display="flex" flexDirection="column" alignItems="center">
           <Icon src={padroes} alt="Padrões" />
           <StyledTypography variant="body1" color="primary" sx={{ mt: 1}}>
-            Parar de repetir padrões que você nunca percebeu.
+            Parar de repetir situações que te machucam sem saber por quê.
           </StyledTypography>
         </Box>
 
-        <Box display="flex" flexDirection="column" alignItems="center">
-          <Icon src={inconsciente} alt="Inconsciente" />
-          <StyledTypography variant="body1" color="primary" sx={{ mt: 1}}>
-            Entrar em contato com um inconsciente que te move como sujeito.
-          </StyledTypography>
-        </Box>
       </Stack>
     </AboutMeSection>
   );

@@ -30,29 +30,23 @@ export default function Info() {
           Vamos juntos escrever uma nova história de vida para além do seu sofrimento.
         </Typography>
         <Typography variant="h2" sx={{ fontSize: '20px', marginBottom: '8px', color: '#4e4e4e' }}>
-          Psicóloga e Psicanalista
+          Psicóloga online e Psicanalista lacaniana
         </Typography>
         <Typography variant="h3" sx={{ fontSize: '16px', marginBottom: '8px' }}>
-          Você se sente ansiosa(o), deprimida(o), presa(o) em si mesma(o) ou distante de quem gostaria de ser? Se sente
-          sem conseguir amar, trabalhar ou se relacionar? Te convido a um novo espaço de escuta e acolhimento. Você não
-          precisa passar por isso sozinha(o). Vamos juntos através da fala, reconstruir sua história e transformar o que
-          hoje te faz sofrer.
+        Você se sente <strong>ansiosa(o), deprimida(o), presa(o) em si mesma(o) ou distante de quem gostaria de ser? </strong>Se sente sem conseguir <strong>amar, 
+        trabalhar ou se relacionar?</strong> Te convido a um novo espaço de escuta e acolhimento. <strong>Você não precisa passar por isso sozinha(o)</strong>. Vamos 
+        juntos através da fala, reconstruir sua história e transformar o que hoje te faz sofrer.
         </Typography>
         <Typography variant="h3" sx={{ fontSize: '16px' }}>
-          – Psicóloga online
+          <li> Atendimento particular</li>
         </Typography>
         <Typography variant="h3" sx={{ fontSize: '16px' }}>
-          – Psicanalista lacaniana
+          <li>Terapia online para pessoas no Brasil e no exterior </li>
         </Typography>
         <Typography variant="h3" sx={{ fontSize: '16px' }}>
-          – Psicanalista particular especializada
+          <li>Vamos ouvir o que seu sofrimento tem a dizer? </li>
         </Typography>
-        <Typography variant="h3" sx={{ fontSize: '16px' }}>
-          – Psicóloga no Brasil e no mundo
-        </Typography>
-        <Typography variant="h3" sx={{ fontSize: '16px' }}>
-          – Vamos ouvir o que seu sofrimento tem a dizer?
-        </Typography>
+
 
         <SocialButtons />
       </Box>

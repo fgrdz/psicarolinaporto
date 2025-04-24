@@ -31,7 +31,9 @@ export default function SocialButtons() {
     }}>
       <ButtonSchedule 
         onClick={handleWhatsAppClick}
-        variant="contained">
+        variant="contained"
+        sx={{backgroundColor: '#25D366'}}
+        >
         AGENDE SUA SESSÃO
       </ButtonSchedule>
     </Box>
@@ -42,15 +44,15 @@ const ButtonSchedule = styled(Button)(({ theme }) => ({
   height: '60px',
   width: '200px',
   boxShadow: `
-    0 0 10px rgba(61, 106, 144, 0.6),
-    0 0 20px rgba(64, 115, 158, 0.4) !important`, 
+    0 0 10px rgba(37, 211, 102, 0.6),
+    0 0 20px rgba(37, 211, 102, 0.4) !important`, 
 
   '&:hover': {
     transform: 'translateY(-1px)',
     boxShadow: `
-      0 0 15px rgba(127, 178, 219, 0.1),
-      0 0 25px rgba(64, 115, 158, 0.6),
-      0 0 35px rgba(100, 155, 200, 0.4) !important`,
+      0 0 15px rgba(37, 211, 102, 0.1),
+      0 0 25px rgba(37, 211, 102, 0.6),
+      0 0 35px rgba(37, 211, 102, 0.4) !important`,
   },
 
   '&::before': {
@@ -62,9 +64,9 @@ const ButtonSchedule = styled(Button)(({ theme }) => ({
     height: '100%',
     background: `linear-gradient(
       45deg,
-      rgba(100, 155, 200, 0.1),
-      rgba(100, 155, 200, 0.05)
+      rgba(37, 211, 102, 0.1),
+      rgba(37, 211, 102, 0.05)
     )`,
     zIndex: -1,
   }
-})); 
+}));

@@ -7,6 +7,7 @@ import FAQ from '../components/Home/FAQ/index';
 import BlogScroll from '../components/Home/BlogScroll/index';
 import Footer from '../components/Home/Footer/index';
 import Reviews from '../components/Home/Reviews/index';
+import PsicanaliseSection from '../components/Home/Psicanalise';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Info />
       </HomeSection>
       <AboutMe path="sobre-mim" />
+      <PsicanaliseSection/>
       <ImpactosPessoais />
       <BlogScroll />
       <Reviews />

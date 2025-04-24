@@ -51,6 +51,9 @@ const ContainerReview = styled.div`
   background-color: #2c4a63;
   color: #fff;
   padding: 20px 20px 0 20px;
+  @media screen and (max-width: 768px) {
+    min-height: 500px;
+  }
 `;
 
 const ReviewSection = styled.div`
@@ -80,7 +83,9 @@ const ReviewCard = styled.div`
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+  p{
+      font-size: 14px;
+    }
   &::-webkit-scrollbar {
     width: 0;
     height: 0; 
@@ -93,10 +98,13 @@ const ReviewCard = styled.div`
   /* Edge/IE */
   -ms-overflow-style: none;
   @media screen and (max-width: 768px) {
+    p{
+      font-size: 12px;
+    }
     width: 250px;
-    min-width: 200px;
-    padding: 30px;
-    height: 200px;
+    min-width: 250px;
+    padding: 40px;
+    height: 350px;
     text-align: left;
   }
 `;
