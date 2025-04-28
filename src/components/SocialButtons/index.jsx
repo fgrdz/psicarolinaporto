@@ -6,7 +6,9 @@ import styled from 'styled-components';
 import { useApp } from '../hooks/context';
 import { useState } from 'react';
 
-export default function SocialButtons() {
+export default function SocialButtons({
+  label
+}) {
   const encodedMessage = "Olá, Carolina! Tenho interesse no tratamento psicanalítico. Poderia me passar mais informações?";
 
   const handleWhatsAppClick = () => {
@@ -33,8 +35,7 @@ export default function SocialButtons() {
         onClick={handleWhatsAppClick}
         variant="contained"
         sx={{backgroundColor: '#25D366'}}
-        >
-        AGENDE SUA SESSÃO
+        >{label ? label : 'AGENDE SUA SESSÃO'}
       </ButtonSchedule>
     </Box>
   );

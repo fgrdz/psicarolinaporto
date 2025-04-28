@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import profile from '../../../assets/profile-3.jpg';
 import { Box, Stack, Typography } from '@mui/material';
+import SocialButtons from '../../SocialButtons';
 
 export default function AboutMe() {
   return (
@@ -28,6 +29,7 @@ export default function AboutMe() {
           </Typography>
         </Box>
       </Stack>
+      <SocialButtons label={"Fale comigo"}/>
     </AboutMeSection>
   );
 }
@@ -58,7 +60,7 @@ const AboutMeSection = styled.section`
 
 const Profile = styled.div`
   float: left;
-  margin: 0 2em 0 0;
+  margin: 0 2em 4px 0;
   position: relative;
 
   img {
