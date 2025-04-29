@@ -6,19 +6,14 @@ import styled from 'styled-components';
 import { useApp } from '../hooks/context';
 import { useState } from 'react';
 
-export default function SocialButtons({
-  label
-}) {
+export default function SocialButtons({label}) {
   const encodedMessage = "Olá, Carolina! Tenho interesse no tratamento psicanalítico. Poderia me passar mais informações?";
 
   const handleWhatsAppClick = () => {
-    if (window.gtag) {
-      window.gtag('event', 'conversion', {
-        'send_to': 'AW-16855079403/t5nhCJDAmrMaEOuzkOU-',
-        'value': 1.0,
-        'currency': 'BRL'
-      });
-    }    
+    if (window.gtag_report_conversion) {
+      window.gtag_report_conversion();
+    }
+    
     window.open(
       `https://wa.me/5583996276657?text=${encodedMessage}`,
       '_blank',
